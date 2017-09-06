@@ -9,9 +9,13 @@ import App from './App'
 import router from './router'
 import EventBus from './lib/eventBus.js'
 import axios from 'axios'
+import iView from 'iview';
+import 'iview/dist/styles/iview.css'; 
 
 Vue.prototype.$bus = EventBus
 Vue.prototype.$http = axios
+
+Vue.use(iView);
 
 /* eslint-disable no-new */
 new Vue({

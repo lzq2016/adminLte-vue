@@ -171,6 +171,14 @@ module.exports = [{
         router: {
             name: 'AdvancedElements'
         }
+    },
+    {
+        type: 'item',
+        icon: 'fa fa-circle-o',
+        name: 'Advanced Elements1',
+        router: {
+            name: 'AdvancedElements1'
+        }
     }, {
         type: 'item',
         icon: 'fa fa-circle-o',
