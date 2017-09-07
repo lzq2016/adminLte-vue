@@ -23,6 +23,7 @@ import Modals from 'pages/ui-elements/Modals.vue'
 import GeneralElements from 'pages/forms/GeneralElements.vue'
 import AdvancedElements from 'pages/forms/AdvancedElements.vue'
 import AdvancedElements1 from 'pages/forms/AdvancedElements1.vue'
+import AdvancedElements2 from 'pages/forms/AdvancedElements2.vue'
 
 Vue.use(Router)
 
@@ -123,6 +124,11 @@ export default new Router({
       path: '/forms/advanced-elements1',
       name: 'AdvancedElements1',
       component: AdvancedElements1
+    },
+    {
+      path: '/forms/advanced-elements2',
+      name: 'AdvancedElements2',
+      component: AdvancedElements2
     }
   ],
   linkActiveClass: 'active'

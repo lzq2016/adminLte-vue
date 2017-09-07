@@ -2,13 +2,13 @@
   <div class="wrap">
      <Row>
         <Col span="4">
-        	<Input v-model="value" placeholder="项目名称" style="width: 160px"></Input>
+        	<Input v-model="value" placeholder="项目名称" style="width: 150px"></Input>
         </Col>
         <Col span="3">
-            <Input v-model="value" placeholder="型号" style="width: 120px"></Input>
+            <Input v-model="value" placeholder="型号" style="width: 110px"></Input>
         </Col>
         <Col span="4">
-            <Input v-model="value" placeholder="物料" style="width: 160px"></Input>
+            <Input v-model="value" placeholder="物料" style="width: 150px"></Input>
         </Col>
         <Col span="7">
             <label>日期：</label>
@@ -28,8 +28,8 @@
     <Row style="margin-top: 20px;" type="flex" justify="space-between" class="code-row-bg">
     	<Col span="6">
     		<Card :bordered="false" style="width: 220px;">
-            <p slot="title" style="">无边框标题</p>
-            <div>
+            <p slot="title" style="">项目名称：厦门市稳创阻容模块降</p>
+            <div style="line-height: 25px;">
                 <p style="color: #999999;">立项时间：2017-06-21</p>
                 <p style="color: #999999;">转批量时间：2017-06-21</p>
                 <p style="color: #999999;">关键物料：1808866</p>
@@ -42,7 +42,26 @@
         <Col span="6">
             <Card :bordered="false" style="width: 220px;">
             <p slot="title" style="">无边框标题</p>
-            <div>
+            <div style="line-height: 25px;">
+                <p style="color: #999999;">立项时间：2017-06-21</p>
+                <p style="color: #999999;">转批量时间：2017-06-21</p>
+                <div style="color: #999999;">
+                <span>关键物料：1808866</span>
+                <img src="../../assets/add.png" style="float: right;cursor: pointer;margin-top: 3px;">
+                </div>
+                <div style="color: #999999;">
+                <span>适用型号：加湿器</span>
+                <img src="../../assets/add.png" style="float: right;cursor: pointer;margin-top: 3px;">
+                </div>
+                <p style="color: #999999;">负责人：张一峰</p>
+                <p style="color: #999999;">项目分类：设计类</p>
+            </div>
+        </Card>
+        </Col>
+        <Col span="6">
+            <Card :bordered="false" style="width: 220px;">
+            <p slot="title" style="">无边框标题</p>
+            <div style="line-height: 25px;">
                 <p style="color: #999999;">立项时间：2017-06-21</p>
                 <p style="color: #999999;">转批量时间：2017-06-21</p>
                 <p style="color: #999999;">关键物料：1808866</p>
@@ -55,76 +74,7 @@
         <Col span="6">
             <Card :bordered="false" style="width: 220px;">
             <p slot="title" style="">无边框标题</p>
-            <div>
-                <p style="color: #999999;">立项时间：2017-06-21</p>
-                <p style="color: #999999;">转批量时间：2017-06-21</p>
-                <p style="color: #999999;">关键物料：1808866</p>
-                <p style="color: #999999;">适用型号：加湿器</p>
-                <p style="color: #999999;">负责人：张一峰</p>
-                <p style="color: #999999;">项目分类：设计类</p>
-            </div>
-        </Card>
-        </Col>
-        <Col span="6">
-            <Card :bordered="false" style="width: 220px;">
-            <p slot="title" style="">无边框标题</p>
-            <div>
-                <p style="color: #999999;">立项时间：2017-06-21</p>
-                <p style="color: #999999;">转批量时间：2017-06-21</p>
-                <p style="color: #999999;">关键物料：1808866</p>
-                <p style="color: #999999;">适用型号：加湿器</p>
-                <p style="color: #999999;">负责人：张一峰</p>
-                <p style="color: #999999;">项目分类：设计类</p>
-            </div>
-        </Card>
-        </Col>
-
-    </Row>
-
-    <Row style="margin-top: 20px;" type="flex" justify="space-between" class="code-row-bg">
-        <Col span="6">
-            <Card :bordered="false" style="width: 220px;">
-            <p slot="title" style="">无边框标题</p>
-            <div>
-                <p style="color: #999999;">立项时间：2017-06-21</p>
-                <p style="color: #999999;">转批量时间：2017-06-21</p>
-                <p style="color: #999999;">关键物料：1808866</p>
-                <p style="color: #999999;">适用型号：加湿器</p>
-                <p style="color: #999999;">负责人：张一峰</p>
-                <p style="color: #999999;">项目分类：设计类</p>
-            </div>
-        </Card>
-        </Col>
-        <Col span="6">
-            <Card :bordered="false" style="width: 220px;">
-            <p slot="title" style="">无边框标题</p>
-            <div>
-                <p style="color: #999999;">立项时间：2017-06-21</p>
-                <p style="color: #999999;">转批量时间：2017-06-21</p>
-                <p style="color: #999999;">关键物料：1808866</p>
-                <p style="color: #999999;">适用型号：加湿器</p>
-                <p style="color: #999999;">负责人：张一峰</p>
-                <p style="color: #999999;">项目分类：设计类</p>
-            </div>
-        </Card>
-        </Col>
-        <Col span="6">
-            <Card :bordered="false" style="width: 220px;">
-            <p slot="title" style="">无边框标题</p>
-            <div>
-                <p style="color: #999999;">立项时间：2017-06-21</p>
-                <p style="color: #999999;">转批量时间：2017-06-21</p>
-                <p style="color: #999999;">关键物料：1808866</p>
-                <p style="color: #999999;">适用型号：加湿器</p>
-                <p style="color: #999999;">负责人：张一峰</p>
-                <p style="color: #999999;">项目分类：设计类</p>
-            </div>
-        </Card>
-        </Col>
-        <Col span="6">
-            <Card :bordered="false" style="width: 220px;">
-            <p slot="title" style="">无边框标题</p>
-            <div>
+            <div style="line-height: 25px;">
                 <p style="color: #999999;">立项时间：2017-06-21</p>
                 <p style="color: #999999;">转批量时间：2017-06-21</p>
                 <p style="color: #999999;">关键物料：1808866</p>
@@ -141,7 +91,7 @@
         <Col span="6">
             <Card :bordered="false" style="width: 220px;">
             <p slot="title" style="">无边框标题</p>
-            <div>
+            <div style="line-height: 25px;">
                 <p style="color: #999999;">立项时间：2017-06-21</p>
                 <p style="color: #999999;">转批量时间：2017-06-21</p>
                 <p style="color: #999999;">关键物料：1808866</p>
@@ -154,7 +104,7 @@
         <Col span="6">
             <Card :bordered="false" style="width: 220px;">
             <p slot="title" style="">无边框标题</p>
-            <div>
+            <div style="line-height: 25px;">
                 <p style="color: #999999;">立项时间：2017-06-21</p>
                 <p style="color: #999999;">转批量时间：2017-06-21</p>
                 <p style="color: #999999;">关键物料：1808866</p>
@@ -167,7 +117,7 @@
         <Col span="6">
             <Card :bordered="false" style="width: 220px;">
             <p slot="title" style="">无边框标题</p>
-            <div>
+            <div style="line-height: 25px;">
                 <p style="color: #999999;">立项时间：2017-06-21</p>
                 <p style="color: #999999;">转批量时间：2017-06-21</p>
                 <p style="color: #999999;">关键物料：1808866</p>
@@ -180,7 +130,63 @@
         <Col span="6">
             <Card :bordered="false" style="width: 220px;">
             <p slot="title" style="">无边框标题</p>
-            <div>
+            <div style="line-height: 25px;">
+                <p style="color: #999999;">立项时间：2017-06-21</p>
+                <p style="color: #999999;">转批量时间：2017-06-21</p>
+                <p style="color: #999999;">关键物料：1808866</p>
+                <p style="color: #999999;">适用型号：加湿器</p>
+                <p style="color: #999999;">负责人：张一峰</p>
+                <p style="color: #999999;">项目分类：设计类</p>
+            </div>
+        </Card>
+        </Col>
+
+    </Row>
+
+    <Row style="margin-top: 20px;" type="flex" justify="space-between" class="code-row-bg">
+        <Col span="6">
+            <Card :bordered="false" style="width: 220px;">
+            <p slot="title" style="">无边框标题</p>
+            <div style="line-height: 25px;">
+                <p style="color: #999999;">立项时间：2017-06-21</p>
+                <p style="color: #999999;">转批量时间：2017-06-21</p>
+                <p style="color: #999999;">关键物料：1808866</p>
+                <p style="color: #999999;">适用型号：加湿器</p>
+                <p style="color: #999999;">负责人：张一峰</p>
+                <p style="color: #999999;">项目分类：设计类</p>
+            </div>
+        </Card>
+        </Col>
+        <Col span="6">
+            <Card :bordered="false" style="width: 220px;">
+            <p slot="title" style="">无边框标题</p>
+            <div style="line-height: 25px;">
+                <p style="color: #999999;">立项时间：2017-06-21</p>
+                <p style="color: #999999;">转批量时间：2017-06-21</p>
+                <p style="color: #999999;">关键物料：1808866</p>
+                <p style="color: #999999;">适用型号：加湿器</p>
+                <p style="color: #999999;">负责人：张一峰</p>
+                <p style="color: #999999;">项目分类：设计类</p>
+            </div>
+        </Card>
+        </Col>
+        <Col span="6">
+            <Card :bordered="false" style="width: 220px;">
+            <p slot="title" style="">无边框标题</p>
+            <div style="line-height: 25px;">
+                <p style="color: #999999;">立项时间：2017-06-21</p>
+                <p style="color: #999999;">转批量时间：2017-06-21</p>
+                <p style="color: #999999;">关键物料：1808866</p>
+                <p style="color: #999999;">适用型号：加湿器</p>
+                <p style="color: #999999;">负责人：张一峰</p>
+                <p style="color: #999999;">项目分类：设计类</p>
+            </div>
+        </Card>
+        </Col>
+        <Col span="6">
+            <Card :bordered="false" style="width: 220px;">
+            <p slot="title" style="">无边框标题</p>
+            <div style="line-height: 25px;">
                 <p style="color: #999999;">立项时间：2017-06-21</p>
                 <p style="color: #999999;">转批量时间：2017-06-21</p>
                 <p style="color: #999999;">关键物料：1808866</p>

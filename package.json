@@ -6,7 +6,7 @@
   "scripts": {
     "mock": "./node_modules/.bin/json-server ./mock-server/index.js",
     "dev-server": "node build/dev-server.js",
-    "dev": "npm-run-all --parallel mock dev-server",
+    "dev": "npm-run-all --parallel dev-server",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
