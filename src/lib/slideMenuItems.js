@@ -5,107 +5,56 @@ module.exports = [{
     items: [{
         type: 'item',
         icon: 'fa fa-circle-o',
-        name: '헬로화면',
+        name: 'test',
         router: {
             name: 'Hello'
         }
     }, {
         type: 'item',
         icon: 'fa fa-circle-o',
-        name: '샘플화면',
+        name: 'test',
         router: {
-            name: 'Sample'
-        }
-    }, {
-        type: 'item',
-        icon: 'fa fa-circle-o',
-        name: 'Dashboard v1',
-        router: {
-            name: 'DashboardV1'
-        }
-    }, {
-        type: 'item',
-        icon: 'fa fa-circle-o',
-        name: 'Dashboard v2',
-        router: {
-            name: 'DashboardV2'
-        }
-    }, {
-        type: 'item',
-        icon: 'fa fa-circle-o',
-        name: 'InfoBox',
-        router: {
-            name: 'InfoBoxExample'
-        }
-    }, {
-        type: 'item',
-        icon: 'fa fa-circle-o',
-        name: 'Chart.js',
-        router: {
-            name: 'ChartExample'
-        }
-    }, {
-        type: 'item',
-        icon: 'fa fa-circle-o',
-        name: 'Alert',
-        router: {
-            name: 'AlertExample'
-        }
-    }, {
-        type: 'item',
-        icon: 'fa fa-circle-o',
-        name: 'Modal',
-        router: {
-            name: 'ModalExample'
-        }
-    }, {
-        type: 'item',
-        icon: 'fa fa-circle-o',
-        name: 'APIExample',
-        router: {
-            name: 'APIExample'
+            name: 'Hello'
         }
     }]
 }, {
     type: 'tree',
     icon: 'fa fa-files-o',
     name: 'Layout Options',
-    badge: {
-        type: 'Number',
-        data: 4
-    },
     items: [{
         type: 'item',
         icon: 'fa fa-circle-o',
-        name: 'Top Navigation',
-        link: 'page/layout/top-nav.html'
+        name: 'test',
+        router: {
+            name: 'Hello'
+        }
     }, {
         type: 'item',
         icon: 'fa fa-circle-o',
-        name: 'Boxed',
-        link: 'page/layout/boxed.html'
-    }, {
-        type: 'item',
-        icon: 'fa fa-circle-o',
-        name: 'Fixed',
-        link: 'page/layout/fixed.html'
-    }, {
-        type: 'item',
-        icon: 'fa fa-circle-o',
-        name: 'Collapsed Sidebar',
-        link: 'page/layout/collapsed-sidebar.html'
+        name: 'test',
+        router: {
+            name: 'Hello'
+        }
     }]
 }, {
     type: 'item',
     icon: 'fa fa-th',
     name: 'Widgets',
-    badge: {
-        type: 'String',
-        data: 'new'
-    },
-    router: {
-        name: 'WidgetsExample'
-    }
+    items: [{
+        type: 'item',
+        icon: 'fa fa-circle-o',
+        name: 'test',
+        router: {
+            name: 'Hello'
+        }
+    }, {
+        type: 'item',
+        icon: 'fa fa-circle-o',
+        name: 'test',
+        router: {
+            name: 'Hello'
+        }
+    }]
 }, {
     type: 'tree',
     icon: 'fa fa-laptop',
@@ -171,8 +120,7 @@ module.exports = [{
         router: {
             name: 'AdvancedElements'
         }
-    },
-    {
+    }, {
         type: 'item',
         icon: 'fa fa-circle-o',
         name: 'Advanced Elements1',
