@@ -2,8 +2,8 @@
   <div class="wrap">
      <Row>
         <Col span="5" style="margin-right: 10px;">
-        	<Select v-model="model1" style="width:200px">
-        		<Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+        	<Select v-model="year" style="width:200px" @on-change="optionChange">
+        		<Option v-for="item in yearList" :value="item.value" :key="item.value">{{ item.label }}</Option>
     		</Select>
         </Col>
         <Col span="3">
@@ -21,92 +21,28 @@
 </template>
 
 <script>
+var serviceData = require("../../lib/service.json");
 export default {
   name: 'advanced-elements',
   data () {
   	return {
-  		cityList: [
-                    {
-                        value: 'beijing',
-                        label: '北京市'
-                    },
-                    {
-                        value: 'shanghai',
-                        label: '上海市'
-                    },
-                    {
-                        value: 'shenzhen',
-                        label: '深圳市'
-                    },
-                    {
-                        value: 'hangzhou',
-                        label: '杭州市'
-                    },
-                    {
-                        value: 'nanjing',
-                        label: '南京市'
-                    },
-                    {
-                        value: 'chongqing',
-                        label: '重庆市'
-                    }
-                ],
-                model1: '',
-                 columns1: [
-                 	{
-                        type: 'index',
-                        width: 200,
-                        align: 'center',
-                        title:'排名'
-                    },
-                    {
-                        title: '项目组',
-                        key: 'project'
-                    },
-                    {
-                        title: '目标',
-                        key: 'target'
-                    },
-                    {
-                        title: '实际',
-                        key: 'real'
-                    },
-                    {
-                        title: '完成率',
-                        key: 'finish'
-                    }
-                ],
-                data1: [
-                    {
-                        project: '王小明',
-                        target: 18,
-                        real:20,
-                        finish: '北京市朝阳区芍药居'
-                    },
-                    {
-                        project: '王小明',
-                        target: 18,
-                        real:20,
-                        finish: '北京市朝阳区芍药居'
-                    },
-                    {
-                        project: '王小明',
-                        target: 18,
-                        real:20,
-                        finish: '北京市朝阳区芍药居'
-                    },
-                    {
-                        project: '王小明',
-                        target: 18,
-                        real:20,
-                        finish: '北京市朝阳区芍药居'
-                    },
-                    
-                ]
+  		yearList: [],
+        year: '2017',
+        columns1: [],
+        data1: []
   	}
   },
-  created () {
-
+  beforeMount () {
+    var self = this;
+    this.yearList = serviceData.yearList;
+    this.columns1 = serviceData.columns1;
+    this.data1 = serviceData.data1;
+  },
+  methods: {
+    optionChange: function(val) {
+        
+    },
+    getTableData:function(){}
   }
 }
 </script>
