@@ -16,31 +16,57 @@
                     <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;" @click="search">搜索</Button>
                     <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;"@click="">导出</Button>
                 </Col>
-                <!-- <Col span="3" style="margin-right: 5px;">
-                    
-                </Col>
-                <Col span="5">
-                    
-                </Col>
-                <Col span="5">
-                    
-                </Col>
-                
-                <Col span="2">
-                	
-                </Col>
-                <Col span="2" style="margin-left: -20px;">
-                    
-                </Col> -->
             </Row>
-            <Row style="margin-top: 20px;">
+            <!-- <Row style="margin-top: 20px;">
             	<Col span="24">
             	<Table stripe :columns="columns7" :data="data6"></Table>	
                 </Col>
-            </Row>
+            </Row> -->
+            <div class="tableWrap" style="margin-top: 20px;">
+                <div class="tableRow backgroundGrey" style="font-weight: bold;height: 40px;">
+                    <span class="tableSpan" style="height: 40px;line-height: 40px;">项目编码</span>
+                    <span class="tableSpan" style="height: 40px;line-height: 40px;">项目名称</span>
+                    <span class="tableSpan" style="height: 40px;line-height: 40px;">项目类别</span>
+                    <span class="tableSpan" style="height: 40px;line-height: 40px;">立项时间</span>
+                    <span class="tableSpan" style="height: 40px;line-height: 40px;">立项部门</span>
+                    <span class="tableSpan" style="height: 40px;line-height: 40px;">负责人</span>
+                    <span class="tableSpan" style="height: 40px;line-height: 40px;">操作</span>
+                </div>
+                <div v-for="(item, index) in data6">
+                    <div class="tableRow" :class="{ backgroundGrey: (index%2 != 0) }">
+                        <img src="../../assets/add.png" style="width: 19px;height: 19px;" v-if="!item.show" @click="item.show=!item.show">
+                        <img src="../../assets/close.png" style="width: 19px;height: 19px;" v-if="item.show" @click="item.show=!item.show">
+                        <span class="tableSpan">{{item.code}}</span>
+                        <span class="tableSpan">{{item.name}}</span>
+                        <span class="tableSpan">{{item.type}}</span>
+                        <span class="tableSpan">{{item.time}}</span>
+                        <span class="tableSpan">{{item.part}}</span>
+                        <span class="tableSpan">{{item.person}}</span>
+                        <div class="tableSpan">
+                            <span style="border: 1px solid #01C0C8;display: inline-block;width: 40px;height: 25px;line-height: 25px;border-radius: 5px;cursor: pointer">查看</span>
+                            <span style="background-color: #01C0C8;color: #fff;display: inline-block;width: 40px;height: 25px;line-height: 25px;border-radius: 5px;cursor: pointer">审核</span>
+                        </div>
+                    </div>
+                    <div style="padding: 15px;" v-show="item.show">
+                        <div style="text-align: center;">
+                            <span style="display: inline-block;background-color: #01C0C8;width: 30%;color: #fff;height: 32px;line-height: 32px;">字段名称</span>
+                            <span style="display: inline-block;background-color: #01C0C8;width: 69%;color: #fff;height: 32px;line-height: 32px;">字段值</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <span style="background-color: #F8F8F9;display: inline-block;width: 30%;height: 30px;line-height: 30px;border: 1px solid #E9EAEC;border-right: none;border-top: none;">单位名称</span>
+                            <span style="display: inline-block;width: 69%;height: 30px;line-height: 30px;border: 1px solid #E9EAEC;border-left: none;border-top: none;">江苏分社</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <span style="background-color: #F8F8F9;display: inline-block;width: 30%;height: 30px;line-height: 30px;border: 1px solid #E9EAEC;border-right: none;border-top: none;">单位名称</span>
+                            <span style="display: inline-block;width: 69%;height: 30px;line-height: 30px;border: 1px solid #E9EAEC;border-left: none;border-top: none;">江苏分社</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div style="margin-top: 20px;text-align: center;">
                  <Page :total="totalList" @on-change="changePage" show-elevator></Page>
             </div>
+            
           </div>
     </div>
 </template>
@@ -191,5 +217,25 @@ export default {
 .wrap{
 	background-color: #fff;
 	padding: 20px;
+}
+.tableWrap{
+    border-top: 3px solid #01C0C8;
+    border-left: 1px solid #E9EAEC;
+    border-right: 1px solid #E9EAEC;
+    border-bottom: 1px solid #E9EAEC;
+}
+.tableRow{
+    height: 48px;
+    border-bottom: 1px solid #E9EAEC;
+    text-align: center;
+}
+.tableSpan{
+    width: 13%;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 48px;
+}
+.backgroundGrey{
+    background-color: #F8F8F9;
 }
 </style>

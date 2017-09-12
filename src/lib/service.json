@@ -180,69 +180,79 @@
 		"type": "采购类",
 		"time": "2017-06-03",
 		"part": "产品部",
-		"person": "张三"
+		"person": "张三",
+		"show":false
 	}, {
 		"code": "BM234230",
 		"name": "科技以人为本",
 		"type": "采购类",
 		"time": "2017-06-03",
 		"part": "产品部",
-		"person": "张三"
+		"person": "张三",
+		"show":false
 	}, {
 		"code": "BM234230",
 		"name": "科技以人为本",
 		"type": "采购类",
 		"time": "2017-06-03",
 		"part": "产品部",
-		"person": "张三"
+		"person": "张三",
+		"show":false
 	}, {
 		"code": "BM234230",
 		"name": "科技以人为本",
 		"type": "采购类",
 		"time": "2017-06-03",
 		"part": "产品部",
-		"person": "张三"
+		"person": "张三",
+		"show":false
 	}, {
 		"code": "BM234230",
 		"name": "科技以人为本",
 		"type": "采购类",
 		"time": "2017-06-03",
 		"part": "产品部",
-		"person": "张三"
+		"person": "张三",
+		"show":false
 	}, {
 		"code": "BM234230",
 		"name": "科技以人为本",
 		"type": "采购类",
 		"time": "2017-06-03",
 		"part": "产品部",
-		"person": "张三"
+		"person": "张三",
+		"show":false
 	}, {
 		"code": "BM234230",
 		"name": "科技以人为本",
 		"type": "采购类",
 		"time": "2017-06-03",
 		"part": "产品部",
-		"person": "张三"
+		"person": "张三",
+		"show":false
 	}, {
 		"code": "BM234230",
 		"name": "科技以人为本",
 		"type": "采购类",
 		"time": "2017-06-03",
 		"part": "产品部",
-		"person": "张三"
+		"person": "张三",
+		"show":false
 	}, {
 		"code": "BM234230",
 		"name": "科技以人为本",
 		"type": "采购类",
 		"time": "2017-06-03",
 		"part": "产品部",
-		"person": "张三"
+		"person": "张三",
+		"show":false
 	}, {
 		"code": "BM234230",
 		"name": "科技以人为本",
 		"type": "采购类",
 		"time": "2017-06-03",
 		"part": "产品部",
-		"person": "张三"
+		"person": "张三",
+		"show":false
 	}]
 }

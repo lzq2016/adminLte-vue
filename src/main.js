@@ -11,12 +11,13 @@ import EventBus from './lib/eventBus.js'
 import axios from 'axios'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css'; 
+import VeeValidate from 'vee-validate';
 
 Vue.prototype.$bus = EventBus
 Vue.prototype.$http = axios
 
 Vue.use(iView);
-
+Vue.use(VeeValidate);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

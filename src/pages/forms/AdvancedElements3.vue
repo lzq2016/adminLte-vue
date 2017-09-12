@@ -8,7 +8,8 @@
              <Row>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目编码:</label>
-                	<Input v-model="projectCode" placeholder="项目编码" style="width: 210px"></Input>
+                	<Input v-model="projectCode" name="projectCode" v-validate="{ rules: { required: true } }" placeholder="项目编码" style="width: 210px"></Input>
+                    <input v-validate="{ rules: { required: true } }" type="text" name="email">
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目名称:</label>
@@ -297,7 +298,8 @@ export default {
         
     },
     error:function () {
-        this.$Message.error('项目类型内容不能为空！');
+        console.log(this.errors)
+        this.errors.has('email')&&this.$Message.error('项目类型内容不能为空！');
     }
   }
 }
