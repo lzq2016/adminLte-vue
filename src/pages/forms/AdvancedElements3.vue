@@ -157,14 +157,10 @@
             </Row>
             <p style="font-size: 12px;color: #3CCFD5;margin-top: 20px;">工艺部 马山 2017-08-21 已审核</p>
             <p style="font-size: 12px;color: #3CCFD5;margin-top: 5px;">工艺部 马山 2017-08-21 已审核</p>
-            <Row style="margin-top: 3px;" justify="center" type="flex">
-                <Col span="3">
-                <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="">通过</Button>    
-                </Col>
-                <Col span="3">
+            <div style="margin-top: 3px;text-align: center;">
+                <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="error">通过</Button>
                 <Button type="primary" style="background-color: #fff;border-color: #01C0C8;color:#01C0C8;width: 80px;" @click="">拒绝</Button>    
-                </Col>
-            </Row>
+            </div>
           </div>
     </div>
 </template>
@@ -299,6 +295,9 @@ export default {
   methods: {
     search: function(val) {
         
+    },
+    error:function () {
+        this.$Message.error('项目类型内容不能为空！');
     }
   }
 }
@@ -316,5 +315,10 @@ export default {
 .wrap{
 	background-color: #fff;
 	padding: 20px;
+}
+.vueError{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 </style>

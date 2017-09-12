@@ -6,13 +6,11 @@
         </div>
       <div class="wrap">
          <Row>
-            <Col span="5" style="margin-right: 10px;">
-            	<Select v-model="year" style="width:200px" @on-change="optionChange">
+            <Col span="24">
+            	<Select v-model="year" style="width:200px;margin-right: 15px;" @on-change="optionChange">
             		<Option v-for="item in yearList" :value="item.value" :key="item.value">{{ item.label }}</Option>
         		</Select>
-            </Col>
-            <Col span="3">
-            	<Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color: #fff;" @click="search">搜索</Button>
+            <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color: #fff;" @click="search">搜索</Button>
             </Col>
         </Row>
         <Row style="margin-top: 20px;">
@@ -20,11 +18,9 @@
         		<Table stripe :columns="columns1" :data="data1"></Table>
             </Col>
         </Row>
-        <Row style="margin-top: 20px;" type="flex" justify="center" class="code-row-bg">
-          <Col span="15">
+        <div style="margin-top: 20px;text-align: center;">
              <Page :total="totalList" :page-size="10" :current="10" @on-change="changePage" show-elevator></Page>
-          </Col>
-        </Row>
+        </div>
       </div>
   </div>
 </template>

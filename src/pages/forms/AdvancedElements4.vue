@@ -11,17 +11,21 @@
                         <Option v-for="item in statusList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
                 </Col>
-                <Col span="2" style="margin-top: 7px;margin-right: 20px;">
-                    <Button type="primary" style="background-color: #01C0C8;border-color: #fff;color:#fff;" @click="preWeek">< 上一周</Button>
-                </Col>
-                <Col span="9" style="margin-top: 7px;">
-                    <label style="color: #fff;">当前周:</label>
-                    <Select v-model="week" style="width: 120px;margin-right: 20px;">
+                <Col span="11" style="margin-top: 7px;margin-right: 20px;" >
+                    <Button type="primary" style="background-color: #01C0C8;border-color: #fff;color:#fff;margin-left: 10px;float: right;" @click="search">导出</Button>
+                    <Button type="primary" style="background-color: #01C0C8;border-color: #fff;color:#fff;float: right;" @click="nextWeek">下一周 ></Button>
+                    <Select v-model="week" style="width: 120px;margin-right: 10px;float: right;">
                         <Option v-for="item in weekList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
-                    <Button type="primary" style="background-color: #01C0C8;border-color: #fff;color:#fff;" @click="nextWeek">下一周 ></Button>
-                    <Button type="primary" style="background-color: #01C0C8;border-color: #fff;color:#fff;margin-left: 10px;" @click="search">导出</Button>
+                    <Button type="primary" style="background-color: #01C0C8;border-color: #fff;color:#fff;float: right;margin-right: 10px;" @click="preWeek">< 上一周</Button>
+                     <label style="color: #fff;float: right;margin-top: 7px;margin-right: 10px;">当前周:</label>
+                    
+                    
+                    
                 </Col>
+                <!-- <Col span="9" style="margin-top: 7px;">
+                   
+                </Col> -->
             </Row>
             <Row style="background-color: #fff;margin-top: 20px;">
                 <Row style="background-color: #fff;position: relative;">
