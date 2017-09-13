@@ -28,6 +28,7 @@ import AdvancedElements3 from 'pages/forms/AdvancedElements3.vue'
 import AdvancedElements4 from 'pages/forms/AdvancedElements4.vue'
 import AdvancedElements5 from 'pages/forms/AdvancedElements5.vue'
 import AdvancedElements6 from 'pages/forms/AdvancedElements6.vue'
+import AdvancedElements7 from 'pages/forms/AdvancedElements7.vue'
 
 Vue.use(Router)
 
@@ -72,6 +73,10 @@ export default new Router({
       path: '/forms/advanced-elements6',
       name: 'AdvancedElements6',
       component: AdvancedElements6
+    },{
+      path: '/forms/advanced-elements7',
+      name: 'AdvancedElements7',
+      component: AdvancedElements7
     }
   ],
   linkActiveClass: 'active'

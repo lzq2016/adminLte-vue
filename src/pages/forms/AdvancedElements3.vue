@@ -313,7 +313,7 @@ export default {
     },
     error:function () {
         console.log(this.errors.all())
-        this.errors.has('email')&&this.$Message.error('项目类型内容不能为空！');
+        !this.errors.has('email')&&this.$Message.error('项目类型内容不能为空！');
     }
   }
 }
