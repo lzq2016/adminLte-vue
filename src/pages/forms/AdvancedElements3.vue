@@ -8,8 +8,7 @@
              <Row>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目编码:</label>
-                	<Input v-model="projectCode" name="projectCode" v-validate="{ rules: { required: true } }" placeholder="项目编码" style="width: 210px"></Input>
-                    <input v-validate="{ rules: { required: true } }" type="text" name="email">
+                	<Input v-model="projectCode" v-validate="'required|email'" name="email" placeholder="项目编码" style="width: 210px"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目名称:</label>
@@ -169,6 +168,19 @@
 <script>
 var serviceData = require("../../lib/service.json");
 
+const dict = {
+  en: {
+    custom: {
+      email: {
+        required: 'Your email is empty11111' // messages can be strings as well.
+      },
+      name: {
+        required: () => 'Your name is empty22222'
+      }
+    }
+  }
+};
+
 export default {
   name: 'advanced-elements',
   data () {
@@ -290,6 +302,8 @@ export default {
   },
   beforeMount () {
     var self = this;
+    this.$validator.updateDictionary(dict);
+    
     this.statusList = serviceData.statusList;
     this.data6 = serviceData.data6;
   },
@@ -298,7 +312,7 @@ export default {
         
     },
     error:function () {
-        console.log(this.errors)
+        console.log(this.errors.all())
         this.errors.has('email')&&this.$Message.error('项目类型内容不能为空！');
     }
   }
