@@ -59,6 +59,13 @@ module.exports = [{
         router: {
             name: 'AdvancedElements5'
         }
+    },{
+        type: 'item',
+        icon: 'fa fa-circle-o',
+        name: 'home',
+        router: {
+            name: 'AdvancedElements6'
+        }
     }]
 }, {
     type: 'tree',
