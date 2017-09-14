@@ -61,7 +61,28 @@
                         </div>
                     </Col>
                     <Col span="11" style="margin-top: 20px;margin-bottom: 20px;">
-                        <Table stripe :columns="columns7" :data="data6"></Table>
+                        <div class="tableWrap" style="margin-top: 20px;">
+                            <div class="tableRow backgroundGrey" style="font-weight: bold;height: 40px;">
+                                <span class="tableSpan" style="height: 40px;line-height: 40px;">计划内容</span>
+                                <span class="tableSpan" style="height: 40px;line-height: 40px;">预计评审完成时间</span>
+                                <span class="tableSpan" style="height: 40px;line-height: 40px;">实际完成时间</span>
+                                <span class="tableSpan" style="height: 40px;line-height: 40px;">状态</span>
+                            </div>
+                            <div v-for="(item, index) in data6">
+                                <div class="tableRow" :class="{ backgroundGrey: (index%2 != 0) }">
+                                    <span class="tableSpan">{{item.code}}</span>
+                                    <span class="tableSpan">{{item.name}}</span>
+                                    <span class="tableSpan">{{item.type}}</span>
+                                    <span class="tableSpan">{{item.time}}</span>
+                                    <span class="tableSpan">{{item.part}}</span>
+                                    <span class="tableSpan">{{item.person}}</span>
+                                    <div class="tableSpan">
+                                        <span style="border: 1px solid #01C0C8;display: inline-block;width: 40px;height: 25px;line-height: 25px;border-radius: 5px;cursor: pointer">查看</span>
+                                        <span style="background-color: #01C0C8;color: #fff;display: inline-block;width: 40px;height: 25px;line-height: 25px;border-radius: 5px;cursor: pointer">审核</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </Col> 
                 </Row>
         </div>
@@ -183,5 +204,25 @@ export default {
 }
 .wrap{
     background-color: #EDF0F5;
+}
+.tableWrap{
+    border-top: 3px solid #01C0C8;
+    border-left: 1px solid #E9EAEC;
+    border-right: 1px solid #E9EAEC;
+    border-bottom: 1px solid #E9EAEC;
+}
+.tableRow{
+    height: 48px;
+    border-bottom: 1px solid #E9EAEC;
+    text-align: center;
+}
+.tableSpan{
+    width: 25%;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 48px;
+}
+.backgroundGrey{
+    background-color: #F8F8F9;
 }
 </style>
