@@ -39,12 +39,15 @@
 			    </Select>
 			</header>
 			<Row>
-				<Col span="4" class="steps step1">
+				<Col span="3" class="steps step1">
 					<span>立项数: <em>360</em></span>
 				</Col>
-				<Col span="4" class="steps step2">
+				<Col span="1" style="width: 20px;">
+					<img src="../../assets/arrowRight.png" style="width: 36px;">
+				</Col>
+				<Col span="3" class="steps step2" style="background:url('../../assets/lingxing.png') no-repeat 0 0;">
 					<span>
-						活动数: <em>120</em>
+						报审数: <em>350</em>
 					</span>
 					<span class="status-error">拒绝数</span>
 				</Col>
