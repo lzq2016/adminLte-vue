@@ -45,7 +45,8 @@
 				<Col span="1" style="width: 20px;">
 					<img src="../../assets/arrowRight.png" style="width: 36px;">
 				</Col>
-				<Col span="3" class="steps step2" style="background:url('../../assets/lingxing.png') no-repeat 0 0;">
+				<!-- <Col span="3" class="steps step2" style="background:url('../../assets/lingxing.png') no-repeat 0 0;"> -->
+				<Col span="3" class="steps step2">
 					<span>
 						报审数: <em>350</em>
 					</span>
@@ -95,6 +96,7 @@
 
 		data () {
 			return {
+				model1:"",
 				table1: {
 					th: [
 						{ title: '项目名称' , key: 'name' } ,

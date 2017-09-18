@@ -62,23 +62,30 @@ module.exports = [{
     },{
         type: 'item',
         icon: 'fa fa-circle-o',
-        name: 'home',
+        name: '首页',
         router: {
             name: 'AdvancedElements6'
         }
     },{
         type: 'item',
         icon: 'fa fa-circle-o',
-        name: 'AdvancedElements7',
+        name: '点检汇总',
         router: {
             name: 'AdvancedElements7'
         }
     },{
         type: 'item',
         icon: 'fa fa-circle-o',
-        name: 'AdvancedElements8',
+        name: '项目立项1',
         router: {
             name: 'AdvancedElements8'
+        }
+    },{
+        type: 'item',
+        icon: 'fa fa-circle-o',
+        name: '项目立项2',
+        router: {
+            name: 'AdvancedElements9'
         }
     }]
 }, {

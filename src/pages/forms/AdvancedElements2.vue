@@ -17,11 +17,6 @@
                     <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;"@click="">导出</Button>
                 </Col>
             </Row>
-            <!-- <Row style="margin-top: 20px;">
-            	<Col span="24">
-            	<Table stripe :columns="columns7" :data="data6"></Table>	
-                </Col>
-            </Row> -->
             <div class="tableWrap" style="margin-top: 20px;">
                 <div class="tableRow backgroundGrey" style="font-weight: bold;height: 40px;">
                     <span class="tableSpan" style="height: 40px;line-height: 40px;">项目编码</span>

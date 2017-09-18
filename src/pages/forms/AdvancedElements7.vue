@@ -59,7 +59,7 @@
                                 <Input placeholder="请输入..." style="width: 300px;margin-top: 5px;vertical-align: middle"></Input>
                             </div>
                             <div style="margin-top: 3px;text-align: center;">
-                                <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="error">保存</Button>
+                                <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="">保存</Button>
                                 <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="">提交</Button>    
                             </div>
                         </div>
@@ -259,7 +259,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .header{
     height: 40px;
     background-color: #fff;
