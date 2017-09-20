@@ -87,6 +87,13 @@ module.exports = [{
         router: {
             name: 'AdvancedElements9'
         }
+    },{
+        type: 'item',
+        icon: 'fa fa-circle-o',
+        name: '项目立项',
+        router: {
+            name: 'AdvancedElements10'
+        }
     }]
 }, {
     type: 'tree',
