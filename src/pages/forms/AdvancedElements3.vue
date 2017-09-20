@@ -1,156 +1,156 @@
 <template>
     <div>
         <div class="header">
-          <span style="font-size: 14px;color: #969696;">项目管理/</span>
-          <span style="font-size: 14px;color: #51D4D9;">项目立项</span>
+          <span class="header1">项目管理/</span>
+          <span class="header2">项目立项</span>
         </div>
           <div class="wrap">
              <Row>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目编码:</label>
-                	<Input v-model="projectCode" v-validate="'required'" name="projectCode" placeholder="项目编码" style="width: 210px"></Input>
+                	<Input v-model="projectCode" v-validate="'required'" name="projectCode" placeholder="项目编码"  class="w210" style="width: 210px"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目名称:</label>
-                    <Input v-model="projectName" placeholder="项目名称" style="width: 210px"></Input>
+                    <Input v-model="projectName" placeholder="项目名称" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;项 目 组:</label>
-                    <Input v-model="projectGroup" placeholder="项目组" style="width: 210px"></Input>
+                    <Input v-model="projectGroup" placeholder="项目组" class="w210"></Input>
                 </Col> 
             </Row>
-            <Row style="margin-top: 10px;">
+            <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目类型:</label>
-                    <Input v-model="projectType" placeholder="项目类型" style="width: 210px"></Input>
+                    <Input v-model="projectType" placeholder="项目类型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;适用机型:</label>
-                    <Input v-model="adaptMachine" placeholder="适用机型" style="width: 210px"></Input>
+                    <Input v-model="adaptMachine" placeholder="适用机型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目属性:</label>
-                    <Input v-model="projectAttr" placeholder="项目属性" style="width: 210px"></Input>
+                    <Input v-model="projectAttr" placeholder="项目属性" class="w210"></Input>
                 </Col> 
             </Row>
-            <Row style="margin-top: 10px;">
+            <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;所属工厂:</label>
-                    <Input v-model="belongFactory" placeholder="项目类型" style="width: 210px"></Input>
+                    <Input v-model="belongFactory" placeholder="项目类型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;所属部门:</label>
-                    <Input v-model="belongPart" placeholder="适用机型" style="width: 210px"></Input>
+                    <Input v-model="belongPart" placeholder="适用机型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;申请序号:</label>
-                    <Input v-model="serNum" placeholder="项目属性" style="width: 210px"></Input>
+                    <Input v-model="serNum" placeholder="项目属性" class="w210"></Input>
                 </Col> 
             </Row>
-            <Row style="margin-top: 10px;">
+            <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;现状背景:</label>
-                    <Input v-model="background" placeholder="项目类型" style="width: 210px"></Input>
+                    <Input v-model="background" placeholder="项目类型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;内容措施:</label>
-                    <Input v-model="content" placeholder="适用机型" style="width: 210px"></Input>
+                    <Input v-model="content" placeholder="适用机型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;预测效益:</label>
-                    <Input v-model="predictBenifit" placeholder="项目属性" style="width: 210px"></Input>
+                    <Input v-model="predictBenifit" placeholder="项目属性" class="w210"></Input>
                 </Col> 
             </Row>
-            <Row style="margin-top: 10px;">
+            <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;预计投入:</label>
-                    <Input v-model="predictIn" placeholder="项目类型" style="width: 210px"></Input>
+                    <Input v-model="predictIn" placeholder="项目类型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;预计单机:</label>
-                    <Input v-model="predictMachine" placeholder="适用机型" style="width: 210px"></Input>
+                    <Input v-model="predictMachine" placeholder="适用机型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;预计产量:</label>
-                    <Input v-model="predictProduct" placeholder="项目属性" style="width: 210px"></Input>
+                    <Input v-model="predictProduct" placeholder="项目属性" class="w210"></Input>
                 </Col> 
             </Row>
-            <Row style="margin-top: 10px;">
+            <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;潜在效益:</label>
-                    <Input v-model="qianzaiBenifit" placeholder="项目类型" style="width: 210px"></Input>
+                    <Input v-model="qianzaiBenifit" placeholder="项目类型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;风险等级:</label>
-                    <Input v-model="degree" placeholder="适用机型" style="width: 210px"></Input>
+                    <Input v-model="degree" placeholder="适用机型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>实施优先级:</label>
-                    <Input v-model="prior" placeholder="项目属性" style="width: 210px"></Input>
+                    <Input v-model="prior" placeholder="项目属性" class="w210"></Input>
                 </Col> 
             </Row>
-            <Row style="margin-top: 10px;">
+            <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;负责人:</label>
-                    <Input v-model="person" placeholder="项目类型" style="width: 210px"></Input>
+                    <Input v-model="person" placeholder="项目类型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目组长:</label>
-                    <Input v-model="zuzhang" placeholder="适用机型" style="width: 210px"></Input>
+                    <Input v-model="zuzhang" placeholder="适用机型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;核算方式:</label>
-                    <Input v-model="compute" placeholder="项目属性" style="width: 210px"></Input>
+                    <Input v-model="compute" placeholder="项目属性" class="w210"></Input>
                 </Col> 
             </Row>
-            <Row style="margin-top: 10px;">
+            <Row class="mt10">
                 <Col span="8">
                     <label>质量部评审:</label>
-                    <Input v-model="qulity" placeholder="项目类型" style="width: 210px"></Input>
+                    <Input v-model="qulity" placeholder="项目类型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>工艺部评审:</label>
-                    <Input v-model="gongyibu" placeholder="适用机型" style="width: 210px"></Input>
+                    <Input v-model="gongyibu" placeholder="适用机型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>开发部审核:</label>
-                    <Input v-model="develop" placeholder="项目属性" style="width: 210px"></Input>
+                    <Input v-model="develop" placeholder="项目属性" class="w210"></Input>
                 </Col> 
             </Row>
-            <Row style="margin-top: 10px;">
+            <Row class="mt10">
                 <Col span="8">
                     <label>财务部评审:</label>
-                    <Input v-model="money" placeholder="项目类型" style="width: 210px"></Input>
+                    <Input v-model="money" placeholder="项目类型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注:</label>
-                    <Input v-model="beizhu" placeholder="适用机型" style="width: 210px"></Input>
+                    <Input v-model="beizhu" placeholder="适用机型" class="w210"></Input>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期:</label>
-                    <Input v-model="date" placeholder="项目属性" style="width: 210px"></Input>
+                    <Input v-model="date" placeholder="项目属性" class="w210"></Input>
                 </Col> 
             </Row>
-            <Row style="margin-top: 10px;">
+            <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;涉及部门:</label>
-                    <Input v-model="shejiPart" placeholder="项目类型" style="width: 210px"></Input>
+                    <Input v-model="shejiPart" placeholder="项目类型" class="w210"></Input>
                 </Col> 
             </Row>
-            <p style="font-size: 14px;color: #3CCFD5;margin-top: 20px;">BOM列表</p>
-            <Row style="margin-top: 3px;">
+            <p class="p1">BOM列表</p>
+            <Row class="mt3">
             	<Col span="24">
             	<Table stripe :columns="columns7" :data="data6"></Table>	
                 </Col>
             </Row>
-            <p style="font-size: 14px;color: #3CCFD5;margin-top: 20px;">效益型号</p>
-            <Row style="margin-top: 3px;">
+            <p class="p1">效益型号</p>
+            <Row class="mt3">
                 <Col span="24">
                 <Table stripe :columns="columns8" :data="data6"></Table>    
                 </Col>
             </Row>
-            <p style="font-size: 14px;color: #3CCFD5;margin-top: 20px;">工作计划</p>
-            <Row style="margin-top: 3px;">
+            <p class="p1">工作计划</p>
+            <Row class="mt3">
                 <Col span="24">
                 <Table stripe :columns="columns9" :data="data6"></Table>    
                 </Col>
@@ -319,7 +319,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .header{
     height: 40px;
     background-color: #fff;
@@ -327,6 +327,14 @@ export default {
     margin-bottom: 20px;
     line-height: 40px;
     padding-right: 20px;
+}
+.header1{
+  font-size: 14px;
+  color: #969696;
+}
+.header2{
+  font-size: 14px;
+  color: #51D4D9;
 }
 .wrap{
 	background-color: #fff;
@@ -336,5 +344,19 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
+}
+.w210{
+    width: 210px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.p1{
+    font-size: 14px;
+    color: #3CCFD5;
+    margin-top: 20px;
+}
+.mt3{
+    margin-top: 3px;
 }
 </style>
