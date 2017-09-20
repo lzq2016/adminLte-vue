@@ -14,7 +14,7 @@
           <span style="font-size: 14px;color: #51D4D9;">项目完成额</span>
         </div>	
 		<!-- row1 - 工作台 -->
-		<Row :gutter="16" style="margin-bottom: 16px;margin-left: 10px;">
+		<Row :gutter="16" style="margin-bottom: 16px;margin-left: 10px;position: absolute;z-index: 2000;width: 100%;">
 			<Col span="12">
 				<div class="ivu-hse-table">
 					<h4 style="font-size: 18px;">我的工作台</h4>
@@ -36,7 +36,7 @@
 					<footer>
 						<div style="display: inline-block;" @click="changeShow1">
 							<span>更多</span>
-							<i class="icon-more"></i>
+							<i class="icon-more" v-bind:class="{ rotate: rotate1 }"></i>
 						</div>
 					</footer>
 				</div>
@@ -66,7 +66,7 @@
 					<footer>
 						<div style="display: inline-block;" @click="changeShow2">
 							<span>更多</span>
-							<i class="icon-more"></i>
+							<i class="icon-more" v-bind:class="{ rotate: rotate2 }"></i>
 						</div>
 					</footer>
 				</div>
@@ -74,7 +74,7 @@
 		</Row>
 		
 		<!-- step -->
-		<div class="ivu-hse-steps">
+		<div class="ivu-hse-steps" style="margin-top: 430px;">
 			<header>
 				<h3>项目进展</h3>
 				<Select v-model="model1" style="width:200px">
@@ -139,6 +139,8 @@
 
 		data () {
 			return {
+				rotate1:false,
+				rotate2:false,
 				data6:[{
 					plantformname:"W3D电装盒固定板结构优化",
 					plantformtime:"2017-06-21",
@@ -345,9 +347,11 @@
                 return '';
             },
             changeShow1:function(){
+            	this.rotate1 = !this.rotate1;
             	this.showHide1 = !this.showHide1;
             },
             changeShow2:function(){
+            	this.rotate2 = !this.rotate2;
             	this.showHide2 = !this.showHide2;
             }
         }
@@ -594,5 +598,8 @@ i.icon-more:after {
 }
 .backgroundPink{
     background-color: #F8DAB2;
+}
+.rotate{
+	transform: rotate(180deg);
 }
 </style>

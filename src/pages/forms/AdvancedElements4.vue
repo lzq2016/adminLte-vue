@@ -28,9 +28,9 @@
                 </Col> -->
             </Row>
             <Row style="background-color: #fff;margin-top: 20px;">
-                <Row style="background-color: #fff;position: relative;">
-                    <img src="../../assets/open.png" style="position: absolute;left: -13px;top: 50%;margin-top: -13px;" @click="open" v-if="openStatus">
-                    <img src="../../assets/close.png" style="position: absolute;left: -13px;top: 50%;margin-top: -13px;" @click="close" v-if="!openStatus">
+                <Row style="background-color: #fff;position: relative;border-bottom: 1px solid #eee">
+                    <img src="../../assets/open.png" style="position: absolute;left: -13px;top: 50%;margin-top: -13px;" @click="close" v-if="!openStatus">
+                    <img src="../../assets/close.png" style="position: absolute;left: -13px;top: 50%;margin-top: -13px;" @click="open" v-if="openStatus">
                     <Col span="21" style="margin-top: 7px;margin-left: 10px;">
                         <Row>
                             <Col style="margin-top: 10px;margin-left: 10px;">
@@ -95,8 +95,8 @@
             </Row>
             <Row style="background-color: #fff;margin-top: 20px;">
                 <Row style="background-color: #fff;position: relative;">
-                    <img src="../../assets/open.png" style="position: absolute;left: -13px;top: 50%;margin-top: -13px;" @click="open" v-if="openStatus">
-                    <img src="../../assets/close.png" style="position: absolute;left: -13px;top: 50%;margin-top: -13px;" @click="close" v-if="!openStatus">
+                    <img src="../../assets/open.png" style="position: absolute;left: -13px;top: 50%;margin-top: -13px;" @click="close" v-if="!openStatus">
+                    <img src="../../assets/close.png" style="position: absolute;left: -13px;top: 50%;margin-top: -13px;" @click="open" v-if="openStatus">
                     <Col span="21" style="margin-top: 7px;margin-left: 10px;">
                         <Row>
                             <Col style="margin-top: 10px;margin-left: 10px;">
@@ -171,7 +171,7 @@ export default {
   name: 'advanced-elements',
   data () {
   	return {
-        openStatus:true,
+        openStatus:false,
         status:"",
         week:"",
         statusList:[],
