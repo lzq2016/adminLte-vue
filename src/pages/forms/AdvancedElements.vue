@@ -1,24 +1,24 @@
 <template>
   <div>
       <div class="header">
-          <span style="font-size: 14px;color: #969696;">项目管理/</span>
-          <span style="font-size: 14px;color: #51D4D9;">项目完成额</span>
+          <span class="header1">项目管理/</span>
+          <span class="header2">项目完成额</span>
         </div>
       <div class="wrap">
          <Row>
             <Col span="24">
-            	<Select v-model="year" style="width:200px;margin-right: 15px;" @on-change="optionChange">
+            	<Select v-model="year" class="select" @on-change="optionChange">
             		<Option v-for="item in yearList" :value="item.value" :key="item.value">{{ item.label }}</Option>
         		</Select>
-            <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color: #fff;" @click="search">搜索</Button>
+            <Button type="primary" class="button" @click="search">搜索</Button>
             </Col>
         </Row>
-        <Row style="margin-top: 20px;">
+        <Row  class="tableWrap">
         	<Col span="24">
         		<Table stripe :columns="columns1" :data="data1"></Table>
             </Col>
         </Row>
-        <div style="margin-top: 20px;text-align: center;">
+        <div class="pageWrap">
              <Page :total="totalList" :page-size="10" :current="10" @on-change="changePage" show-elevator></Page>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .header{
     height: 40px;
     background-color: #fff;
@@ -98,8 +98,32 @@ export default {
     line-height: 40px;
     padding-right: 20px;
 }
+.header1{
+  font-size: 14px;
+  color: #969696;
+}
+.header2{
+  font-size: 14px;
+  color: #51D4D9;
+}
 .wrap{
 	background-color: #fff;
 	padding: 20px;
+}
+.select{
+  width:200px;
+  margin-right: 15px;
+}
+.button{
+  background-color: #01C0C8;
+  border-color: #01C0C8;
+  color: #fff;
+}
+.tableWrap{
+  margin-top: 20px;
+}
+.pageWrap{
+  margin-top: 20px;
+  text-align: center;
 }
 </style>

@@ -1,23 +1,23 @@
 <template>
     <div>
         <div class="header">
-          <span style="font-size: 14px;color: #969696;">项目管理/</span>
-          <span style="font-size: 14px;color: #51D4D9;">共享资源中心</span>
+          <span class="header1">项目管理/</span>
+          <span class="header2">共享资源中心</span>
         </div>
           <div class="wrap">
              <Row>
                 <Col span="24">
-                	<Input v-model="projectName" placeholder="项目名称" style="width: 150px;margin-right: 10px;"></Input>
-                    <Input v-model="type" placeholder="型号" style="width: 110px;margin-right: 10px;"></Input>
-                    <Input v-model="materia" placeholder="物料" style="width: 150px;margin-right: 10px;"></Input>
+                	<Input v-model="projectName" placeholder="项目名称" class="inputStyle1"></Input>
+                    <Input v-model="type" placeholder="型号" class="inputStyle2"></Input>
+                    <Input v-model="materia" placeholder="物料" class="inputStyle1"></Input>
                     <label>日期：</label>
-                    <DatePicker type="date" v-model="dateStart" placeholder="选择日期" style="width: 110px"></DatePicker>
+                    <DatePicker type="date" v-model="dateStart" placeholder="选择日期" class="dataPicker"></DatePicker>
                     <label>至</label>
-                    <DatePicker type="date" v-model="dateEnd" placeholder="选择日期" style="width: 110px;margin-right: 10px;"></DatePicker>
-                    <Select v-model="status" style="width: 100px;margin-right: 10px;">
+                    <DatePicker type="date" v-model="dateEnd" placeholder="选择日期" class="inputStyle2"</DatePicker>
+                    <Select v-model="status" class="select">
                         <Option v-for="item in statusList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
-                    <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color: #fff;" @click="search">搜索</Button>
+                    <Button type="primary" class="button" @click="search">搜索</Button>
                 </Col>
             </Row>
             <!-- <Row style="margin-top: 20px;" type="flex" justify="space-between" class="code-row-bg">
@@ -41,24 +41,24 @@
                     </div>
                 </Col>
             </Row> -->
-            <div style="width: 100%;margin-top: 20px;">
-                <div class="Vuecard" style="margin-right: 15px;width: 23%;float: left;margin-bottom: 15px;" v-for="item in card">
-                        <p slot="title" v-bind:class="{ 'green': item.green, 'purse': !item.green }"><span style="width: 200px; ">项目名称：{{item.projectName}}</span></p>
-                        <div style="line-height: 25px;font-size: 14px;padding-left: 15px;padding-top: 15px;padding-bottom: 15px;line-height: 24px;">
-                            <p style="color: #999999;">立项时间：{{item.startTime}}</p>
-                            <p style="color: #999999;">转批量时间：{{item.pachTime}}</p>
-                            <div style="color: #999999;">
+            <div class="cardWrap">
+                <div class="Vuecard" v-for="item in card">
+                        <p slot="title" v-bind:class="{ 'green': item.green, 'purse': !item.green }"><span class="w200">项目名称：{{item.projectName}}</span></p>
+                        <div class="cardInnerWrap" style="">
+                            <p class="color99">立项时间：{{item.startTime}}</p>
+                            <p class="color99">转批量时间：{{item.pachTime}}</p>
+                            <div class="color99">
                             <span>关键物料：{{item.materia}}</span>
-                            <img src="../../assets/add.png" style="float: right;cursor: pointer;margin-top: 5px;margin-right: 10px;" @click="add">
+                            <img src="../../assets/add.png" class="addImg"  @click="add">
                             </div>
-                            <div style="color: #999999;">
+                            <div class="color99">
                             <span>适用型号：{{item.type}}</span>
-                            <img src="../../assets/add.png" style="float: right;cursor: pointer;margin-top: 5px;margin-right: 10px;" @click="add">
+                            <img src="../../assets/add.png" class="addImg" @click="add">
                             </div>
-                            <p style="color: #999999;">负责人：{{item.person}}</p>
-                            <div style="color: #999999;">
+                            <p class="color99">负责人：{{item.person}}</p>
+                            <div class="color99">
                                 <span>项目分类：{{item.catgory}}</span>
-                                <span style="float: right;cursor: pointer;margin-top: 5px;margin-right: 10px;">导出</span>
+                                <span class="output">导出</span>
                             </div>
                         </div>
                     </div>
@@ -233,7 +233,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .header{
     height: 40px;
     background-color: #fff;
@@ -242,10 +242,22 @@ export default {
     line-height: 40px;
     padding-right: 20px;
 }
+.header1{
+  font-size: 14px;color: #969696;
+}
+.header2{
+  font-size: 14px;color: #51D4D9;
+}
 .wrap{
 	background-color: #fff;
 	padding: 20px;
     overflow: hidden;
+}
+.Vuecard{
+    margin-right: 15px;
+    width: 23%;
+    float: left;
+    margin-bottom: 15px;
 }
 .Vuecard:hover{
     box-shadow: 0 1px 6px rgba(0,0,0,.2);
@@ -266,5 +278,55 @@ export default {
     text-align: center;
     line-height: 45px;
     font-size: 14px;
+}
+.inputStyle1{
+    width: 150px;
+    margin-right: 10px;
+}
+.inputStyle2{
+    width: 110px;
+    margin-right: 10px;
+}
+.dataPicker{
+    width: 110px;
+}
+.select{
+    width: 100px;
+    margin-right: 10px;
+}
+.button{
+    background-color: #01C0C8;
+    border-color: #01C0C8;
+    color: #fff;
+}
+.cardWrap{
+    width: 100%;
+    margin-top: 20px;
+}
+.w200{
+    width: 200px;
+}
+.cardInnerWrap{
+    line-height: 25px;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 24px; 
+}
+.color99{
+    color: #999999;
+}
+.addImg{
+    float: right;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.output{
+    float: right;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 10px;
 }
 </style>

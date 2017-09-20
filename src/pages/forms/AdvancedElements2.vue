@@ -1,36 +1,36 @@
 <template>
     <div>
         <div class="header">
-          <span style="font-size: 14px;color: #969696;">项目管理/</span>
-          <span style="font-size: 14px;color: #51D4D9;">项目审核</span>
+          <span class="header1">项目管理/</span>
+          <span class="header2">项目审核</span>
         </div>
           <div class="wrap">
              <Row>
                 <Col span="24">
-                	<Input v-model="projectCode" placeholder="项目编码/名称" style="width: 200px"></Input>
-                    <Select v-model="status" style="width: 200px;margin-right: 10px;">
+                	<Input v-model="projectCode" placeholder="项目编码/名称" class="w200"></Input>
+                    <Select v-model="status" class="select">
                         <Option v-for="item in statusList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
-                    <Input v-model="catgory" placeholder="项目类别" style="width: 200px;margin-right: 10px;"></Input>
-                    <DatePicker type="date" placeholder="立项时间" style="width: 160px;margin-right: 10px;" v-model="startTime"></DatePicker>
-                    <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;" @click="search">搜索</Button>
-                    <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;"@click="">导出</Button>
+                    <Input v-model="catgory" placeholder="项目类别" class="select"></Input>
+                    <DatePicker type="date" placeholder="立项时间" class="dataPicker" v-model="startTime"></DatePicker>
+                    <Button type="primary" class="button" @click="search">搜索</Button>
+                    <Button type="primary" class="button" @click="">导出</Button>
                 </Col>
             </Row>
-            <div class="tableWrap" style="margin-top: 20px;">
-                <div class="tableRow backgroundGrey" style="font-weight: bold;height: 40px;">
-                    <span class="tableSpan" style="height: 40px;line-height: 40px;">项目编码</span>
-                    <span class="tableSpan" style="height: 40px;line-height: 40px;">项目名称</span>
-                    <span class="tableSpan" style="height: 40px;line-height: 40px;">项目类别</span>
-                    <span class="tableSpan" style="height: 40px;line-height: 40px;">立项时间</span>
-                    <span class="tableSpan" style="height: 40px;line-height: 40px;">立项部门</span>
-                    <span class="tableSpan" style="height: 40px;line-height: 40px;">负责人</span>
-                    <span class="tableSpan" style="height: 40px;line-height: 40px;">操作</span>
+            <div class="tableWrap">
+                <div class="tableRow backgroundGrey title">
+                    <span class="tableSpan h40l40">项目编码</span>
+                    <span class="tableSpan h40l40">项目名称</span>
+                    <span class="tableSpan h40l40">项目类别</span>
+                    <span class="tableSpan h40l40">立项时间</span>
+                    <span class="tableSpan h40l40">立项部门</span>
+                    <span class="tableSpan h40l40">负责人</span>
+                    <span class="tableSpan h40l40">操作</span>
                 </div>
                 <div v-for="(item, index) in data6">
                     <div class="tableRow" :class="{ backgroundGrey: (index%2 != 0) }">
-                        <img src="../../assets/add.png" style="width: 19px;height: 19px;" v-if="!item.show" @click="item.show=!item.show">
-                        <img src="../../assets/close.png" style="width: 19px;height: 19px;" v-if="item.show" @click="item.show=!item.show">
+                        <img src="../../assets/add.png" class="img1" v-if="!item.show" @click="item.show=!item.show">
+                        <img src="../../assets/close.png" class="img1" v-if="item.show" @click="item.show=!item.show">
                         <span class="tableSpan">{{item.code}}</span>
                         <span class="tableSpan">{{item.name}}</span>
                         <span class="tableSpan">{{item.type}}</span>
@@ -38,27 +38,27 @@
                         <span class="tableSpan">{{item.part}}</span>
                         <span class="tableSpan">{{item.person}}</span>
                         <div class="tableSpan">
-                            <span style="border: 1px solid #01C0C8;display: inline-block;width: 40px;height: 25px;line-height: 25px;border-radius: 5px;cursor: pointer">查看</span>
-                            <span style="background-color: #01C0C8;color: #fff;display: inline-block;width: 40px;height: 25px;line-height: 25px;border-radius: 5px;cursor: pointer">审核</span>
+                            <span class="look">查看</span>
+                            <span  class="shenhe">审核</span>
                         </div>
                     </div>
-                    <div style="padding: 15px;" v-show="item.show">
-                        <div style="text-align: center;">
-                            <span style="display: inline-block;background-color: #01C0C8;width: 30%;color: #fff;height: 32px;line-height: 32px;">字段名称</span>
-                            <span style="display: inline-block;background-color: #01C0C8;width: 69%;color: #fff;height: 32px;line-height: 32px;">字段值</span>
+                    <div class="p15" v-show="item.show">
+                        <div class="tc">
+                            <span class="textTitle1">字段名称</span>
+                            <span class="textContent1">字段值</span>
                         </div>
-                        <div style="text-align: center;">
-                            <span style="background-color: #F8F8F9;display: inline-block;width: 30%;height: 30px;line-height: 30px;border: 1px solid #E9EAEC;border-right: none;border-top: none;">单位名称</span>
-                            <span style="display: inline-block;width: 69%;height: 30px;line-height: 30px;border: 1px solid #E9EAEC;border-left: none;border-top: none;">江苏分社</span>
+                        <div class="tc">
+                            <span class="textTitle">单位名称</span>
+                            <span class="textContent">江苏分社</span>
                         </div>
-                        <div style="text-align: center;">
-                            <span style="background-color: #F8F8F9;display: inline-block;width: 30%;height: 30px;line-height: 30px;border: 1px solid #E9EAEC;border-right: none;border-top: none;">单位名称</span>
-                            <span style="display: inline-block;width: 69%;height: 30px;line-height: 30px;border: 1px solid #E9EAEC;border-left: none;border-top: none;">江苏分社</span>
+                        <div class="tc">
+                            <span class="textTitle">单位名称</span>
+                            <span class="textContent">江苏分社</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div style="margin-top: 20px;text-align: center;">
+            <div class="pageWrap">
                  <Page :total="totalList" @on-change="changePage" show-elevator></Page>
             </div>
             
@@ -209,6 +209,14 @@ export default {
     line-height: 40px;
     padding-right: 20px;
 }
+.header1{
+  font-size: 14px;
+  color: #969696;
+}
+.header2{
+  font-size: 14px;
+  color: #51D4D9;
+}
 .wrap{
 	background-color: #fff;
 	padding: 20px;
@@ -218,6 +226,7 @@ export default {
     border-left: 1px solid #E9EAEC;
     border-right: 1px solid #E9EAEC;
     border-bottom: 1px solid #E9EAEC;
+    margin-top: 20px;
 }
 .tableRow{
     height: 48px;
@@ -232,5 +241,97 @@ export default {
 }
 .backgroundGrey{
     background-color: #F8F8F9;
+}
+.w200{
+    width: 200px;
+}
+.select{
+    width: 200px;
+    margin-right: 10px;
+}
+.dataPicker{
+    width: 160px;
+    margin-right: 10px;
+}
+.button{
+    background-color: #01C0C8;
+    border-color: #01C0C8;
+    color:#fff;
+}
+.title{
+    font-weight: bold;
+    height: 40px;
+}
+.h40l40{
+    height: 40px;
+    line-height: 40px;
+}
+.img1{
+    width: 19px;
+    height: 19px;
+}
+.look{
+    border: 1px solid #01C0C8;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.shenhe{
+    background-color: #01C0C8;
+    color: #fff;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 5px;
+    cursor: pointer
+}
+.p15{
+    padding: 15px;
+}
+.tc{
+    text-align: center;
+}
+.textTitle{
+    background-color: #F8F8F9;
+    display: inline-block;
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #E9EAEC;
+    border-right: none;
+    border-top: none;
+}
+.textTitle1{
+    display: inline-block;
+    background-color: #01C0C8;
+    width: 30%;
+    color: #fff;
+    height: 32px;
+    line-height: 32px;
+}
+.textContent1{
+    display: inline-block;
+    background-color: #01C0C8;
+    width: 69%;
+    color: #fff;
+    height: 32px;
+    line-height: 32px;
+}
+.textContent{
+    display: inline-block;
+    width: 69%;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #E9EAEC;
+    border-left: none;
+    border-top: none;
+}
+.pageWrap{
+    margin-top: 20px;
+    text-align: center;
 }
 </style>
