@@ -155,11 +155,11 @@
                 <Table stripe :columns="columns9" :data="data6"></Table>    
                 </Col>
             </Row>
-            <p style="font-size: 12px;color: #3CCFD5;margin-top: 20px;">工艺部 马山 2017-08-21 已审核</p>
-            <p style="font-size: 12px;color: #3CCFD5;margin-top: 5px;">工艺部 马山 2017-08-21 已审核</p>
-            <div style="margin-top: 3px;text-align: center;">
-                <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="error">通过</Button>
-                <Button type="primary" style="background-color: #fff;border-color: #01C0C8;color:#01C0C8;width: 80px;" @click="">拒绝</Button>    
+            <p class="footerText">工艺部 马山 2017-08-21 已审核</p>
+            <p class="footerText mt5">工艺部 马山 2017-08-21 已审核</p>
+            <div class="buttonWrap">
+                <Button type="primary" class="through" @click="error">通过</Button>
+                <Button type="primary" class="reject" @click="">拒绝</Button>    
             </div>
           </div>
     </div>
@@ -167,19 +167,6 @@
 
 <script>
 var serviceData = require("../../lib/service.json");
-
-const dict = {
-  en: {
-    custom: {
-      email: {
-        required: 'Your email is empty11111' // messages can be strings as well.
-      },
-      name: {
-        required: () => 'Your name is empty22222'
-      }
-    }
-  }
-};
 
 export default {
   name: 'advanced-elements',
@@ -302,7 +289,6 @@ export default {
   },
   beforeMount () {
     var self = this;
-    this.$validator.updateDictionary(dict);
     
     this.statusList = serviceData.statusList;
     this.data6 = serviceData.data6;
@@ -312,8 +298,8 @@ export default {
         
     },
     error:function () {
-        console.log(this.errors.has('email'))
-        !this.errors.has('email')&&this.$Message.error('项目类型内容不能为空！');
+        // console.log(this.errors.has('email'))
+        // !this.errors.has('email')&&this.$Message.error('项目类型内容不能为空！');
     }
   }
 }
@@ -358,5 +344,29 @@ export default {
 }
 .mt3{
     margin-top: 3px;
+}
+.footerText{
+    font-size: 12px;
+    color: #3CCFD5;
+    margin-top: 20px;
+}
+.mt5{
+    margin-top: 5px;
+}
+.mt5{
+    margin-top: 3px;
+    text-align: center;
+}
+.through{
+    background-color: #01C0C8;
+    border-color: #01C0C8;
+    color:#fff;
+    width: 80px;
+}
+.reject{
+    background-color: #fff;
+    border-color: #01C0C8;
+    color:#01C0C8;
+    width: 80px;
 }
 </style>

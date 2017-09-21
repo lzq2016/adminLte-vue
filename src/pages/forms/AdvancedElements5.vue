@@ -1,124 +1,124 @@
 <template>
     <div>
         <div class="header">
-          <span style="font-size: 14px;color: #969696;">项目管理/</span>
-          <span style="font-size: 14px;color: #51D4D9;">产品分析中心</span>
+          <span class="header1">项目管理/</span>
+          <span class="header2">产品分析中心</span>
         </div>
         <div class="wrap">
             <Row>
-                <Col span="3" style="margin-right: 10px;">
+                <Col span="3" class="mr10"> 
                     <Select v-model="status">
                         <Option v-for="item in statusList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
                 </Col>
-                <Col span="5" style="margin-right: 15px;">
+                <Col span="5" class="mr15">
                     <Input v-model="projectName" placeholder="产品型号"></Input>
                 </Col>
                 <Col span="8">
-                    <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 79px;" @click="search">搜索</Button>
+                    <Button type="primary" class="button1" @click="search">搜索</Button>
                 </Col> 
             </Row>
-             <Row style="margin-top: 15px;">
+             <Row class="mr15">
                 <Col span="24">
-                    <span style="font-size: 14px;color: #C7C7C7;">产品型号：</span>
-                    <span style="font-size: 18px;font-weight: bold;color: #11C3C9;margin-right: 15px;">AKA100003W00</span>
-                    <span style="font-size: 14px;color: #C7C7C7;">降低额：</span>
-                    <span style="font-size: 18px;font-weight: bold;color: #11C3C9;margin-right: 15px;">230.000</span>
-                    <span style="font-size: 14px;color: #C7C7C7;">降低率：</span>
-                    <span style="font-size: 18px;font-weight: bold;color: #11C3C9;margin-right: 15px;">20%</span>
-                    <span style="font-size: 14px;color: #C7C7C7;">总效益：</span>
-                    <span style="font-size: 18px;font-weight: bold;color: #11C3C9;">￥20000</span>
+                    <span class="label1">产品型号：</span>
+                    <span class="text1">AKA100003W00</span>
+                    <span class="label1">降低额：</span>
+                    <span class="text1">230.000</span>
+                    <span class="label1">降低率：</span>
+                    <span class="text1">20%</span>
+                    <span class="label1">总效益：</span>
+                    <span class="text2">￥20000</span>
                 </Col>
             </Row>
-            <Row style="margin-top: 10px;border-top: 1px solid #F1F1F1;">
-                <Row style="margin-top: 20px;">
-                    <Col span="3" style="height: 60px;line-height: 60px;text-align: center;">
-                        <span style="font-size: 14px;color: #C9C9C9;">2017-08-10</span>
+            <Row class="row1">
+                <Row class="mt20">
+                    <Col span="3" class="col1">
+                        <span class="text3">2017-08-10</span>
                     </Col>
                     <Col span="21">
-                        <div style="border-left: 1px solid #F1F1F1;position: relative;">
-                            <img src="../../assets/yudi.png" style="position: absolute;top: 50%;left: 0;margin-left: -11px;margin-top: -15px;">
-                            <div style="background-color: #F7F7F7;margin-left: 25px;height: 60px;line-height: 60px;padding-left: 10px;">
-                                <span style="font-size: 14px;color: #C7C7C7;">项目名称：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">诺德曼加湿器降价3.21% </span>
-                                <span style="font-size: 14px;color: #C7C7C7;">立项时间：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">2017-08-10</span>
-                                <span style="font-size: 14px;color: #C7C7C7;">总转批量时间：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">2017-08-10</span>
-                                <span style="font-size: 14px;color: #C7C7C7;">核算产量：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">1612</span>
-                                <span style="font-size: 14px;color: #C7C7C7;">核算效益：</span>
-                                <span style="font-size: 14px;color: #11C3C9;">599</span>
+                        <div class="div1">
+                            <img src="../../assets/yudi.png" class="img1">
+                            <div class="div2">
+                                <span class="label1">项目名称：</span>
+                                <span class="text4">诺德曼加湿器降价3.21% </span>
+                                <span class="label1">立项时间：</span>
+                                <span class="text4">2017-08-10</span>
+                                <span class="label1">总转批量时间：</span>
+                                <span class="text4">2017-08-10</span>
+                                <span class="label1">核算产量：</span>
+                                <span class="text4">1612</span>
+                                <span class="label1">核算效益：</span>
+                                <span class="text5">599</span>
                             </div>
                         </div>
                     </Col>
                 </Row>
-                <Row style="height: 20px;">
+                <Row class="h20">
                     <Col span="3">
-                    <span style="font-size: 14px;color: #C9C9C9;">&nbsp;&nbsp;</span>
+                    <span class="text3">&nbsp;&nbsp;</span>
                     </Col>
                     <Col span="21" style="border-left: 1px solid #F1F1F1;">
-                    <span style="font-size: 14px;color: #C9C9C9;">&nbsp;&nbsp;</span>
+                    <span class="text3">&nbsp;&nbsp;</span>
                     </Col>
                 </Row>
                 <Row>
-                    <Col span="3" style="height: 60px;line-height: 60px;text-align: center;">
-                        <span style="font-size: 14px;color: #C9C9C9;">2017-08-10</span>
+                    <Col span="3" class="col1">
+                        <span class="text3">2017-08-10</span>
                     </Col>
                     <Col span="21">
-                        <div style="border-left: 1px solid #F1F1F1;position: relative;">
-                            <img src="../../assets/yudi.png" style="position: absolute;top: 50%;left: 0;margin-left: -11px;margin-top: -15px;">
-                            <div style="background-color: #F7F7F7;margin-left: 25px;height: 60px;line-height: 60px;padding-left: 10px;">
-                                <span style="font-size: 14px;color: #C7C7C7;">项目名称：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">诺德曼加湿器降价3.21% </span>
-                                <span style="font-size: 14px;color: #C7C7C7;">立项时间：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">2017-08-10</span>
-                                <span style="font-size: 14px;color: #C7C7C7;">总转批量时间：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">2017-08-10</span>
-                                <span style="font-size: 14px;color: #C7C7C7;">核算产量：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">1612</span>
-                                <span style="font-size: 14px;color: #C7C7C7;">核算效益：</span>
-                                <span style="font-size: 14px;color: #11C3C9;">599</span>
+                        <div class="div1">
+                            <img src="../../assets/yudi.png" class="img1">
+                            <div class="div2">
+                                <span class="label1">项目名称：</span>
+                                <span class="text4">诺德曼加湿器降价3.21% </span>
+                                <span class="label1">立项时间：</span>
+                                <span class="text4">2017-08-10</span>
+                                <span class="label1">总转批量时间：</span>
+                                <span class="text4">2017-08-10</span>
+                                <span class="label1">核算产量：</span>
+                                <span class="text4">1612</span>
+                                <span class="label1">核算效益：</span>
+                                <span class="text5">599</span>
                             </div>
                         </div>
                     </Col>
                 </Row> 
-                <Row style="height: 20px;">
+                <Row class="h20">
                     <Col span="3">
-                    <span style="font-size: 14px;color: #C9C9C9;">&nbsp;&nbsp;</span>
+                    <span class="text3">&nbsp;&nbsp;</span>
                     </Col>
                     <Col span="21" style="border-left: 1px solid #F1F1F1;">
-                    <span style="font-size: 14px;color: #C9C9C9;">&nbsp;&nbsp;</span>
+                    <span class="text3">&nbsp;&nbsp;</span>
                     </Col>
                 </Row>
                 <Row>
-                    <Col span="3" style="height: 60px;line-height: 60px;text-align: center;">
-                        <span style="font-size: 14px;color: #C9C9C9;">2017-08-10</span>
+                    <Col span="3" class="col1">
+                        <span class="text3">2017-08-10</span>
                     </Col>
                     <Col span="21">
-                        <div style="border-left: 1px solid #F1F1F1;position: relative;">
-                            <img src="../../assets/yudi.png" style="position: absolute;top: 50%;left: 0;margin-left: -11px;margin-top: -15px;">
-                            <div style="background-color: #F7F7F7;margin-left: 25px;height: 60px;line-height: 60px;padding-left: 10px;">
-                                <span style="font-size: 14px;color: #C7C7C7;">项目名称：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">诺德曼加湿器降价3.21% </span>
-                                <span style="font-size: 14px;color: #C7C7C7;">立项时间：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">2017-08-10</span>
-                                <span style="font-size: 14px;color: #C7C7C7;">总转批量时间：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">2017-08-10</span>
-                                <span style="font-size: 14px;color: #C7C7C7;">核算产量：</span>
-                                <span style="font-size: 14px;color: #11C3C9;margin-right: 10px;">1612</span>
-                                <span style="font-size: 14px;color: #C7C7C7;">核算效益：</span>
-                                <span style="font-size: 14px;color: #11C3C9;">599</span>
+                        <div class="div1">
+                            <img src="../../assets/yudi.png" class="img1">
+                            <div class="div2">
+                                <span class="label1">项目名称：</span>
+                                <span class="text4">诺德曼加湿器降价3.21% </span>
+                                <span class="label1">立项时间：</span>
+                                <span class="text4">2017-08-10</span>
+                                <span class="label1">总转批量时间：</span>
+                                <span class="text4">2017-08-10</span>
+                                <span class="label1">核算产量：</span>
+                                <span class="text4">1612</span>
+                                <span class="label1">核算效益：</span>
+                                <span class="text5">599</span>
                             </div>
                         </div>
                     </Col>
                 </Row> 
-                <Row style="height: 20px;">
+                <Row class="h20">
                     <Col span="3">
-                    <span style="font-size: 14px;color: #C9C9C9;">&nbsp;&nbsp;</span>
+                    <span class="text3">&nbsp;&nbsp;</span>
                     </Col>
                     <Col span="21" style="border-left: 1px solid #F1F1F1;">
-                    <span style="font-size: 14px;color: #C9C9C9;">&nbsp;&nbsp;</span>
+                    <span class="text3">&nbsp;&nbsp;</span>
                     </Col>
                 </Row>     
             </Row>
@@ -210,7 +210,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .header{
     height: 40px;
     background-color: #fff;
@@ -219,10 +219,91 @@ export default {
     line-height: 40px;
     padding-right: 20px;
 }
+.header1{
+  font-size: 14px;
+  color: #969696;
+}
+.header2{
+  font-size: 14px;
+  color: #51D4D9;
+}
 .wrap{
     background-color: #fff;
     padding: 20px;
     margin-left: 20px;
     margin-right: 20px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.mr15{
+    margin-right: 15px;
+}
+.button1{
+    background-color: #01C0C8;
+    border-color: #01C0C8;
+    color:#fff;
+    width: 79px;
+}
+.label1{
+    font-size: 14px;
+    color: #C7C7C7;
+}
+.text1{
+    font-size: 18px;
+    font-weight: bold;
+    color: #11C3C9;
+    margin-right: 15px;
+}
+.text2{
+    font-size: 18px;
+    font-weight: bold;
+    color: #11C3C9;
+}
+.row1{
+    margin-top: 10px;
+    border-top: 1px solid #F1F1F1;
+}
+.mt20{
+    margin-top: 20px;
+}
+.col1{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.text3{
+    font-size: 14px;
+    color: #C9C9C9;
+}
+.div1{
+    border-left: 1px solid #F1F1F1;
+    position: relative;
+}
+.img1{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-left: -11px;
+    margin-top: -15px;
+}
+.div2{
+    background-color: #F7F7F7;
+    margin-left: 25px;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 10px;
+}
+.text4{
+    font-size: 14px;
+    color: #11C3C9;
+    margin-right: 10px;
+}
+.text5{
+    font-size: 14px;
+    color: #11C3C9;
+}
+.h20{
+    height: 20px;
 }
 </style>
