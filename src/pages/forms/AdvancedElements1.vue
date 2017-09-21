@@ -48,12 +48,44 @@
                             <p class="color99">立项时间：{{item.startTime}}</p>
                             <p class="color99">转批量时间：{{item.pachTime}}</p>
                             <div class="color99">
-                            <span>关键物料：{{item.materia}}</span>
-                            <img src="../../assets/add.png" class="addImg"  @click="add">
+                                <span>关键物料：{{item.materia}}</span>
+                                <Tooltip placement="top" class="addImg">
+                                    <img src="../../assets/add.png">
+                                    <div slot="content" class="tooltipWrap">
+                                        <div>
+                                            <span>关键物料：{{item.materia}}</span>
+                                            <span class="ml10">关键物料：{{item.materia}}</span>  
+                                        </div>
+                                        <div>
+                                            <span>关键物料：{{item.materia}}</span>
+                                            <span class="ml10">关键物料：{{item.materia}}</span>  
+                                        </div>
+                                        <div>
+                                            <span>关键物料：{{item.materia}}</span>
+                                            <span class="ml10">关键物料：{{item.materia}}</span>  
+                                        </div>
+                                    </div>
+                                </Tooltip>
                             </div>
                             <div class="color99">
-                            <span>适用型号：{{item.type}}</span>
-                            <img src="../../assets/add.png" class="addImg" @click="add">
+                                <span>适用型号：{{item.type}}</span>
+                                <Tooltip placement="top" class="addImg">
+                                    <img src="../../assets/add.png">
+                                    <div slot="content" class="tooltipWrap">
+                                        <div>
+                                            <span>适用型号：{{item.type}}</span>
+                                            <span class="ml10">适用型号：{{item.type}}</span>  
+                                        </div>
+                                        <div>
+                                            <span>适用型号：{{item.type}}</span>
+                                            <span class="ml10">适用型号：{{item.type}}</span>  
+                                        </div>
+                                        <div>
+                                            <span>适用型号：{{item.type}}</span>
+                                            <span class="ml10">适用型号：{{item.type}}</span>  
+                                        </div>
+                                    </div>
+                                </Tooltip>
                             </div>
                             <p class="color99">负责人：{{item.person}}</p>
                             <div class="color99">
@@ -320,7 +352,6 @@ export default {
 .addImg{
     float: right;
     cursor: pointer;
-    margin-top: 5px;
     margin-right: 10px;
 }
 .output{
@@ -328,5 +359,8 @@ export default {
     cursor: pointer;
     margin-top: 5px;
     margin-right: 10px;
+}
+.ml10{
+    margin-left: 10px;
 }
 </style>

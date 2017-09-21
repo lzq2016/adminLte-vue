@@ -11,7 +11,7 @@
                         <Option v-for="item in statusList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
                 </Col>
-                <Col span="11" class="titleWrapCol mt20">
+                <Col span="11" class="titleWrapCol">
                     <Button type="primary" class="titleButton ml10" @click="search">导出</Button>
                     <Button type="primary" class="titleButton" @click="nextWeek">下一周 ></Button>
                     <Select v-model="week" class="titleSelect">

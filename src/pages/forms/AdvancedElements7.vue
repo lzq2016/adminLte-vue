@@ -27,9 +27,9 @@
                     <Col span="2" style="margin-top: 100px;margin-top:55px; text-align: center;">
                         <span style="color:#14C5CC;font-size: 14px;">第23周</span>
                     </Col>
-                    <Col span="10" style="border-left: 1px solid #E6E6E6;margin-top: 20px;margin-bottom: 20px;height: 100%;position: relative;height: 430px;">
+                    <Col span="10" style="border-left: 1px solid #E6E6E6;margin-top: 20px;margin-bottom: 20px;height: 100%;position: relative;height: 480px;">
                         <img src="../../assets/yudi.png" style="position: absolute;top: 20%;left: 0;margin-top: -15px;margin-left: -11px;">
-                        <div style="background-color: #F1F1F1;margin-left: 30px;height: 430px;">
+                        <div style="background-color: #F1F1F1;margin-left: 30px;height: 480px;">
                             <div style="padding-top: 15px;margin-left: 20px;">
                                 <span style="font-size: 14px;color: #13C3CB;display: block;">已&nbsp;完&nbsp;成&nbsp;工&nbsp;作&nbsp;:</span>
                                 <Input placeholder="请输入..." style="width: 295px;margin-top: 5px;"></Input>
@@ -55,7 +55,7 @@
                                 <Input placeholder="请输入..." style="width: 300px;margin-top: 5px;vertical-align: middle"></Input>
                             </div>
                             <div style="padding-top: 5px;margin-left: 15px;padding-bottom: 15px;">
-                                <span style="font-size: 14px;">注意事项:</span>
+                                <span style="font-size: 14px;">注&nbsp;意&nbsp;事&nbsp;项:</span>
                                 <Input placeholder="请输入..." style="width: 300px;margin-top: 5px;vertical-align: middle"></Input>
                             </div>
                             <div style="margin-top: 3px;text-align: center;">
@@ -64,7 +64,7 @@
                             </div>
                         </div>
                     </Col>
-                    <Col span="11" style="margin-top: 20px;margin-bottom: 20px;background-color: #F1F1F1;height: 430px;">
+                    <Col span="11" style="margin-top: 20px;margin-bottom: 20px;background-color: #F1F1F1;height: 480px;">
                         <div class="tableWrap" style="margin-top: 20px;">
                             <div class="tableRow backgroundGrey" style="font-weight: bold;height: 40px;">
                                 <span class="tableSpan" style="height: 40px;line-height: 40px;">计划内容</span>

@@ -163,7 +163,9 @@
                     </Col> 
                 </Row>
                 <div style="margin-top: 3px;text-align: center;">
-                    <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="">下一步</Button>  
+                  <router-link to="/forms/advanced-elements9">
+                    <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="">下一步</Button>
+                  </router-link>
                 </div>
             </Col>
         </Row>
