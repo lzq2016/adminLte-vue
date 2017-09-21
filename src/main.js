@@ -11,13 +11,15 @@ import EventBus from './lib/eventBus.js'
 import axios from 'axios'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css'; 
-import VeeValidate from 'vee-validate';
+import verify from "vue-verify-plugin";
 
 Vue.prototype.$bus = EventBus
 Vue.prototype.$http = axios
 
 Vue.use(iView);
-Vue.use(VeeValidate);
+Vue.use(verify,{
+        blur:true
+});
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
