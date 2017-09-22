@@ -1,25 +1,25 @@
 <template>
   <div>
       <div class="header">
-          <span style="font-size: 14px;color: #969696;">项目管理/</span>
-          <span style="font-size: 14px;color: #51D4D9;">项目完成额</span>
+          <span class="header1">项目管理/</span>
+          <span class="header2">项目完成额</span>
         </div>
-      <div class="wrap" style="background-color: #ECF0F5;">
-         <Row style="position: relative;height: 1200px;">
-            <div style="position: absolute;top: 0;left: 0;width: 115px;z-index: 4000;">
+      <div class="wrap">
+         <Row class="row1">
+            <div class="div1">
               <img src="../../assets/arrow.png" style="width: 17px;">
-              <img src="../../assets/info.png" style="width: 101px;top: 69px;left: 8px;position:absolute">
-              <img src="../../assets/workSelect.png" style="width: 101px;top: 137px;left: 8px;position:absolute">
+              <img src="../../assets/info.png" class="img1">
+              <img src="../../assets/workSelect.png" class="img2">
             </div>
-            <Col span="24" style="background-color: #fff;padding-top: 30px;padding-bottom: 30px;padding-left: 40px;position: absolute;top: 0;left:94px;z-index: 3000;">
-               <p style="font-size: 14px;color: #39CED4;">BOM列表</p>
-                <div class="tableWrap" style="margin-top: 5px;max-width: 90%;">
-                  <div class="tableRow backgroundGrey" style="font-weight: bold;height: 40px;">
-                      <span class="tableSpan" style="height: 40px;line-height: 40px;">序号</span>
-                      <span class="tableSpan" style="height: 40px;line-height: 40px;">物料编码(新)</span>
-                      <span class="tableSpan" style="height: 40px;line-height: 40px;">物料名称(原)</span>
-                      <span class="tableSpan" style="height: 40px;line-height: 40px;">单价</span>
-                      <span class="tableSpan" style="height: 40px;line-height: 40px;">操作</span>
+            <Col span="24" class="col1">
+               <p class="p1">BOM列表</p>
+                <div class="tableWrap" class="div2">
+                  <div class="tableRow backgroundGrey div3">
+                      <span class="tableSpan span1">序号</span>
+                      <span class="tableSpan span1">物料编码(新)</span>
+                      <span class="tableSpan span1">物料名称(原)</span>
+                      <span class="tableSpan span1">单价</span>
+                      <span class="tableSpan span1">操作</span>
                   </div>
                   <div v-for="(item, index) in data6">
                       <div class="tableRow" :class="{ backgroundGrey: (index%2 != 0) }">
@@ -28,27 +28,27 @@
                           <span class="tableSpan">{{item.type}}</span>
                           <span class="tableSpan">{{item.time}}</span>
                           <div class="tableSpan">
-                              <span style="border: 1px solid #01C0C8;display: inline-block;width: 40px;height: 25px;line-height: 25px;border-radius: 5px;cursor: pointer">查看</span>
-                              <span style="background-color: #01C0C8;color: #fff;display: inline-block;width: 40px;height: 25px;line-height: 25px;border-radius: 5px;cursor: pointer">审核</span>
+                              <span class="span2">查看</span>
+                              <span class="span3">审核</span>
                           </div>
                       </div>
                   </div>
                 </div>
-                <div style="display: flex;justify-content:space-between;margin-top: 10px;max-width: 90%;">
-                  <span style="font-size: 14px;color: #39CED4;">效益型号</span>
-                  <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="">添加产品</Button> 
+                <div class="div4">
+                  <span class="p1">效益型号</span>
+                  <Button type="primary" class="button1" @click="">添加产品</Button> 
                 </div>
-                <div style="max-width: 90%;margin-top: 10px;">
+                <div class="div5">
                   <Table stripe :columns="columns1" :data="data1"></Table>
                 </div>
-               <p style="font-size: 14px;color: #39CED4;margin-top: 10px;">工作计划</p>
-                 <div class="tableWrap" style="margin-top: 5px;max-width: 90%;">
-                  <div class="tableRow backgroundGrey" style="font-weight: bold;height: 40px;">
-                      <div class="tableSpan1" style="height: 40px;line-height: 40px;text-align: left;">
+               <p class="p2">工作计划</p>
+                 <div class="tableWrap div2">
+                  <div class="tableRow backgroundGrey div3">
+                      <div class="tableSpan1 div6">
                         <Checkbox v-model="single"></Checkbox>
                       </div>
-                      <span class="tableSpan1" style="height: 40px;line-height: 40px;text-align: left;">计划内容</span>
-                      <span class="tableSpan1" style="height: 40px;line-height: 40px;text-align: right">预计完成时间</span>
+                      <span class="tableSpan1 div6">计划内容</span>
+                      <span class="tableSpan1 span4">预计完成时间</span>
                   </div>
                   <div v-for="(item, index) in data6">
                       <div class="tableRow" :class="{ backgroundGrey: (index%2 != 0) }">
@@ -63,7 +63,7 @@
                   </div>
                 </div>   
                 <div style="margin-top: 20px;text-align: center;max-width: 90%;">
-                    <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="">保存</Button>  
+                    <Button type="primary" class="button1" @click="">保存</Button>  
                 </div>
             </Col>
         </Row>
@@ -186,9 +186,10 @@ export default {
     line-height: 40px;
     padding-right: 20px;
 }
+
 .wrap{
 	padding: 20px;
-  background-color: #fff;
+  background-color: #ECF0F5;
 }
 .tableWrap{
     border-top: 3px solid #01C0C8;
@@ -216,5 +217,104 @@ export default {
 }
 .backgroundGrey{
     background-color: #F8F8F9;
+}
+.row1{
+  position: relative;
+  height: 1200px;
+}
+.div1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 115px;
+  z-index: 4000;
+}
+.img1{
+  width: 101px;
+  top: 69px;
+  left: 8px;
+  position:absolute;
+}
+.img2{
+  width: 101px;
+  top: 137px;
+  left: 8px;
+  position:absolute;
+}
+.col1{
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  position: absolute;
+  top: 0;
+  left:94px;
+  z-index: 3000;
+}
+.p1{
+  font-size: 14px;
+  color: #39CED4;
+}
+.div2{
+  margin-top: 5px;
+  max-width: 90%;
+}
+.div3{
+  font-weight: bold;
+  height: 40px;
+}
+.span1{
+  font-weight: bold;
+  height: 40px;
+}
+.span2{
+  border: 1px solid #01C0C8;
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.span3{
+  background-color: #01C0C8;
+  color: #fff;
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.div4{
+  display: flex;
+  justify-content:space-between;
+  margin-top: 10px;
+  max-width: 90%;
+}
+.button1{
+  background-color: #01C0C8;
+  border-color: #01C0C8;
+  color:#fff;
+  width: 80px;
+}
+.div5{
+  max-width: 90%;
+  margin-top: 10px;
+}
+.p2{
+  font-size: 14px;
+  color: #39CED4;
+  margin-top: 10px;
+}
+.div6{
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+}
+.span4{
+  height: 40px;
+  line-height: 40px;
+  text-align: right;
 }
 </style>

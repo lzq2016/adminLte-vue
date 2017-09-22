@@ -2,28 +2,28 @@
 	
 	<section class="page-section">	
 		<div class="header">
-			<div style="display: inline-block;float: left;margin-left: 20px;">
-				<img src="../../assets/grey.png" style="width: 11px;height: 11px;">
-				<span style="margin-right: 10px;">正常</span>
-				<img src="../../assets/green.png" style="width: 11px;height: 11px;">
-				<span style="margin-right: 10px;">已提交</span>
-				<img src="../../assets/pink.png" style="width: 11px;height: 11px;">
-				<span style="margin-right: 10px;">紧急超时</span>
+			<div class="div1">
+				<img src="../../assets/grey.png" class="img1">
+				<span class="mr10">正常</span>
+				<img src="../../assets/green.png" class="img1">
+				<span class="mr10">已提交</span>
+				<img src="../../assets/pink.png" class="img1">
+				<span class="mr10">紧急超时</span>
 			</div>
-          <span style="font-size: 14px;color: #969696;">项目管理/</span>
-          <span style="font-size: 14px;color: #51D4D9;">项目完成额</span>
+          <span class="header1">项目管理/</span>
+          <span class="header2">项目完成额</span>
         </div>	
 		<!-- row1 - 工作台 -->
-		<Row :gutter="16" style="margin-bottom: 16px;margin-left: 10px;position: absolute;z-index: 2000;width: 100%;">
+		<Row :gutter="16" class="row1">
 			<Col span="12">
 				<div class="ivu-hse-table">
-					<h4 style="font-size: 18px;">我的工作台</h4>
+					<h4 class="h4">我的工作台</h4>
 					<!-- <Table stripe :columns="table1.th" :data="table1.td" :row-class-name="rowClassName"></Table> -->
-					<div class="tableWrap" v-bind:class="{ showHide: showHide1 }" style="margin-top: 10px;">
-                            <div class="tableRow backgroundGrey" style="font-weight: bold;height: 40px;">
-                                <span class="tableSpan" style="height: 40px;line-height: 40px;">项目名称</span>
-                                <span class="tableSpan" style="height: 40px;line-height: 40px;">立项时间</span>
-                                <span class="tableSpan" style="height: 40px;line-height: 40px;">任务类型</span>
+					<div class="tableWrap mt10" v-bind:class="{ showHide: showHide1 }">
+                            <div class="tableRow backgroundGrey div2">
+                                <span class="tableSpan" class="span2">项目名称</span>
+                                <span class="tableSpan" class="span2">立项时间</span>
+                                <span class="tableSpan" class="span2">任务类型</span>
                             </div>
                             <div v-for="(item, index) in data6">
                                 <div class="tableRow" :class="{ backgroundGrey: item.backgroundGrey,backgroundGreen:item.backgroundGreen,backgroundPink:item.backgroundPink }">
@@ -46,12 +46,12 @@
 					<h4 style="font-size: 18px;">我的项目</h4>
 					<!-- <Table stripe :columns="table2.th" :data="table2.td" :row-class-name="rowClassName"></Table> -->
 					<div class="tableWrap" v-bind:class="{ showHide: showHide2 }" style="margin-top: 10px;">
-                            <div class="tableRow backgroundGrey" style="font-weight: bold;height: 40px;">
-                                <span class="tableSpan1" style="height: 40px;line-height: 40px;">项目编码</span>
-                                <span class="tableSpan1" style="height: 40px;line-height: 40px;">项目名称</span>
-                                <span class="tableSpan1" style="height: 40px;line-height: 40px;">项目类别</span>
-                                <span class="tableSpan1" style="height: 40px;line-height: 40px;">阶段</span>
-                                <span class="tableSpan1" style="height: 40px;line-height: 40px;">状态</span>
+                            <div class="tableRow backgroundGrey div2">
+                                <span class="tableSpan1" class="span2">项目编码</span>
+                                <span class="tableSpan1" class="span2">项目名称</span>
+                                <span class="tableSpan1" class="span2">项目类别</span>
+                                <span class="tableSpan1" class="span2">阶段</span>
+                                <span class="tableSpan1" class="span2">状态</span>
                             </div>
                             <div v-for="(item, index) in data7">
                                 <div class="tableRow" :class="{ backgroundGrey: item.backgroundGrey,backgroundGreen:item.backgroundGreen,backgroundPink:item.backgroundPink }">
@@ -74,19 +74,19 @@
 		</Row>
 		
 		<!-- step -->
-		<div class="ivu-hse-steps" style="margin-top: 430px;">
+		<div class="ivu-hse-steps" class="mt430">
 			<header>
 				<h3>项目进展</h3>
-				<Select v-model="model1" style="width:200px">
+				<Select v-model="model1" class="w200">
 			        <Option v-for="item in classify" :value="item.value" :key="item.value">{{ item.label }}</Option>
 			    </Select>
 			</header>
 			<Row>
-				<Col span="3" class="steps" style="width: 150px;">
+				<Col span="3" class="steps" class="w150">
 					<span>立项数: <em>360</em></span>
 				</Col>
-				<Col span="2" style="width: 20px;">
-					<img src="../../assets/arrowRight.png" style="width: 36px;">
+				<Col span="2" class="w20">
+					<img src="../../assets/arrowRight.png" class="w36">
 				</Col>
 				<!-- <Col span="3" class="steps step2" style="background:url('../../assets/lingxing.png') no-repeat 0 0;"> -->
 				<Col span="3" class="steps">
@@ -123,7 +123,7 @@
 		</div>
 
 		<!-- table -->
-		<Row class="ivu-hse-noborder" style="padding-left: 15px;padding-top: 15px;padding-right: 15px;padding-bottom: 15px;background-color: #fff;">
+		<Row class="ivu-hse-noborder" class="row3">
 			<Col span="24">
 				<Table :columns="table3.th" :data="table3.td"></Table>
 			</Col>
@@ -601,5 +601,68 @@ i.icon-more:after {
 }
 .rotate{
 	transform: rotate(180deg);
+}
+.div1{
+	display: inline-block;
+	float: left;
+	margin-left: 20px;
+}
+.img1{
+	width: 11px;
+	height: 11px;
+}
+.mr10{
+	margin-right: 10px;
+}
+.header1{
+	font-size: 14px;
+	color: #969696;
+}
+.header2{
+	font-size: 14px;
+	color: #51D4D9;
+}
+.row1{
+	margin-bottom: 16px;
+	margin-left: 10px;
+	position: absolute;
+	z-index: 2000;
+	width: 100%;
+}
+.h4{
+	font-size: 18px;
+}
+.mt10{
+	margin-top: 10px;
+}
+.div2{
+	font-weight: bold;
+	height: 40px;
+}
+.span2{
+	height: 40px;
+	line-height: 40px;
+}
+.mt430{
+	margin-top: 430px;
+}
+.w200{
+	width: 200px;
+}
+.w20{
+	width: 20px;
+}
+.w36{
+	width: 36px;
+}
+.w150{
+	width: 150px;
+}
+.row3{
+	padding-left: 15px;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	background-color: #fff;
 }
 </style>

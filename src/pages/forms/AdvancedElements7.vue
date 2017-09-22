@@ -1,76 +1,76 @@
 <template>
     <div>
         <div class="header">
-          <span style="font-size: 14px;color: #969696;">项目管理/</span>
-          <span style="font-size: 14px;color: #51D4D9;">项目点检</span>
+          <span class="header1">项目管理/</span>
+          <span class="header2">项目点检</span>
         </div>
         <div class="wrap">
-             <Row style="background-color: #01C0C8;height: 45px;">
-                <Col span="12" style="margin-left: 10px;line-height: 45px;">
-                    <span style="font-size: 18px;color: #fff;">项目名称：W3D电装盒固定板结构优化</span>
-                    <span style="font-size: 18px;color: #fff;margin-left: 30px;">关键物料：WL938292</span>
+             <Row class="row1">
+                <Col span="12" class="col1">
+                    <span class="span1">项目名称：W3D电装盒固定板结构优化</span>
+                    <span class="span1 ml30">关键物料：WL938292</span>
                 </Col>
             </Row>
-            <Row style="background-color: #fff;">
-                <Col span="24" style="margin-left: 10px;line-height: 45px;">
-                    <span style="font-size: 14px;color:#aaaaaa; ">项目编号：</span>
-                    <span style="margin-right: 30px;font-size: 14px;">0100167492</span>
-                    <span style="font-size: 14px;color:#aaaaaa; ">状态：</span>
-                    <span style="margin-right: 30px;font-size: 14px;">转批量</span>
-                    <span style="font-size: 14px;color:#aaaaaa; ">立项时间：</span>
-                    <span style="margin-right: 30px;font-size: 14px;">2017-05-28 15:11:23</span>
-                    <span style="font-size: 14px;color:#aaaaaa; ">计划实施时间：</span>
-                    <span style="margin-right: 30px;font-size: 14px;">2017-05-28 15:11:23</span>
+            <Row class="bgwhite">
+                <Col span="24" class="col1">
+                    <span class="span2">项目编号：</span>
+                    <span class="span3">0100167492</span>
+                    <span class="span2">状态：</span>
+                    <span class="span3">转批量</span>
+                    <span class="span2">立项时间：</span>
+                    <span class="span3">2017-05-28 15:11:23</span>
+                    <span class="span2">计划实施时间：</span>
+                    <span class="span3">2017-05-28 15:11:23</span>
                 </Col>
             </Row>
-            <Row style="background-color: #fff;border-top: 1px solid #E6E6E6;" >
-                    <Col span="2" style="margin-top: 100px;margin-top:55px; text-align: center;">
-                        <span style="color:#14C5CC;font-size: 14px;">第23周</span>
+            <Row class="bgwhite row2">
+                    <Col span="2" class="col2">
+                        <span class="span4">第23周</span>
                     </Col>
-                    <Col span="10" style="border-left: 1px solid #E6E6E6;margin-top: 20px;margin-bottom: 20px;height: 100%;position: relative;height: 480px;">
-                        <img src="../../assets/yudi.png" style="position: absolute;top: 20%;left: 0;margin-top: -15px;margin-left: -11px;">
-                        <div style="background-color: #F1F1F1;margin-left: 30px;height: 480px;">
-                            <div style="padding-top: 15px;margin-left: 20px;">
-                                <span style="font-size: 14px;color: #13C3CB;display: block;">已&nbsp;完&nbsp;成&nbsp;工&nbsp;作&nbsp;:</span>
-                                <Input placeholder="请输入..." style="width: 295px;margin-top: 5px;"></Input>
+                    <Col span="10" class="col3">
+                        <img src="../../assets/yudi.png" class="img2">
+                        <div class="div1">
+                            <div class="div2">
+                                <span class="span5">已&nbsp;完&nbsp;成&nbsp;工&nbsp;作&nbsp;:</span>
+                                <Input placeholder="请输入..." class="input1"></Input>
                             </div>
-                            <div style="padding-top: 5px;margin-left: 15px;">
-                                <span style="font-size: 14px;color: #13C3CB;display: block">正在进行的工作:</span>
-                                <Input placeholder="请输入..." style="width: 300px;margin-top: 5px;"></Input>
+                            <div class="div3">
+                                <span class="span5">正在进行的工作:</span>
+                                <Input placeholder="请输入..." class="input2"></Input>
                             </div>
-                            <div style="padding-top: 5px;margin-left: 15px;margin-top: 5px;">
-                                <span style="font-size: 14px;vertical-align: middle">预计生产效益时间:</span>
-                                <DatePicker type="date" placeholder="选择日期" style="width: 175px;vertical-align: middle;margin-left: 5px;"></DatePicker>
+                            <div class="div3 mt5">
+                                <span class="span6">预计生产效益时间:</span>
+                                <DatePicker type="date" placeholder="选择日期" class="dp1"></DatePicker>
                             </div>
-                            <div style="padding-top: 5px;margin-left: 15px;margin-top: 5px;">
-                                <span style="font-size: 14px;">BOM&nbsp;发&nbsp;布&nbsp;时&nbsp;间:</span>
-                                <DatePicker type="date" placeholder="选择日期" style="width: 185px;vertical-align: middle;margin-left: 5px;"></DatePicker>
+                            <div class="div3 mt5">
+                                <span class="ft14">BOM&nbsp;发&nbsp;布&nbsp;时&nbsp;间:</span>
+                                <DatePicker type="date" placeholder="选择日期" class="dp2"></DatePicker>
                             </div>
-                            <div style="padding-top: 5px;margin-left: 15px;">
-                                <span style="font-size: 14px;vertical-align: middle">BOM编号(PLM):</span>
-                                <Input placeholder="请输入..." style="width: 300px;margin-top: 5px;vertical-align: middle"></Input>
+                            <div class="div3">
+                                <span class="span6">BOM编号(PLM):</span>
+                                <Input placeholder="请输入..." class="input3"></Input>
                             </div>
-                            <div style="padding-top: 5px;margin-left: 15px;">
-                                <span style="font-size: 14px;">切换进度点检:</span>
-                                <Input placeholder="请输入..." style="width: 300px;margin-top: 5px;vertical-align: middle"></Input>
+                            <div class="div3">
+                                <span class="ft14">切换进度点检:</span>
+                                <Input placeholder="请输入..." class="input3"></Input>
                             </div>
-                            <div style="padding-top: 5px;margin-left: 15px;padding-bottom: 15px;">
-                                <span style="font-size: 14px;">注&nbsp;意&nbsp;事&nbsp;项:</span>
-                                <Input placeholder="请输入..." style="width: 300px;margin-top: 5px;vertical-align: middle"></Input>
+                            <div class="div3 pb15">
+                                <span class="ft14">注&nbsp;意&nbsp;事&nbsp;项:</span>
+                                <Input placeholder="请输入..." class="input3"></Input>
                             </div>
-                            <div style="margin-top: 3px;text-align: center;">
-                                <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="">保存</Button>
-                                <Button type="primary" style="background-color: #01C0C8;border-color: #01C0C8;color:#fff;width: 80px;" @click="">提交</Button>    
+                            <div class="div4">
+                                <Button type="primary" class="button1" @click="">保存</Button>
+                                <Button type="primary" class="button1" @click="">提交</Button>    
                             </div>
                         </div>
                     </Col>
-                    <Col span="11" style="margin-top: 20px;margin-bottom: 20px;background-color: #F1F1F1;height: 480px;">
-                        <div class="tableWrap" style="margin-top: 20px;">
-                            <div class="tableRow backgroundGrey" style="font-weight: bold;height: 40px;">
-                                <span class="tableSpan" style="height: 40px;line-height: 40px;">计划内容</span>
-                                <span class="tableSpan" style="height: 40px;line-height: 40px;">预计评审完成时间</span>
-                                <span class="tableSpan" style="height: 40px;line-height: 40px;">实际完成时间</span>
-                                <span class="tableSpan" style="height: 40px;line-height: 40px;">状态</span>
+                    <Col span="11" class="col4">
+                        <div class="tableWrap mt20">
+                            <div class="tableRow backgroundGrey div5">
+                                <span class="tableSpan" class="span7">计划内容</span>
+                                <span class="tableSpan" class="span7">预计评审完成时间</span>
+                                <span class="tableSpan" class="span7">实际完成时间</span>
+                                <span class="tableSpan" class="span7">状态</span>
                             </div>
                             <div v-for="(item, index) in data6">
                                 <div class="tableRow" :class="{ backgroundGrey: (index%2 != 0) }">
@@ -80,8 +80,8 @@
                                         <DatePicker type="date" placeholder="选择日期" style="width: 105px"></DatePicker>
                                     </span>
                                     <div class="tableSpan">
-                                        <span v-if="item.status=='0'" style="display: inline-block;width: 40px;height: 25px;line-height: 25px;">已完成</span>
-                                        <span v-if="item.status=='1'" style="display: inline-block;width: 40px;height: 25px;line-height: 25px;">已超期</span>
+                                        <span v-if="item.status=='0'" class="span8">已完成</span>
+                                        <span v-if="item.status=='1'" class="span8">已超期</span>
                                         <Select v-model="model1" v-if="item.status=='2'" style="width:103px">
                                             <Option v-for="item in statusList1" :value="item.value" :key="item.value">{{ item.label }}</Option>
                                         </Select>
@@ -91,24 +91,24 @@
                         </div>
                     </Col>        
             </Row>
-            <Row style="background-color: #fff;" >
-                    <Col span="2" style="margin-top:36px; text-align: center;">
-                        <span style="color:#ED5B46;font-size: 14px;">第23周</span>
+            <Row class="bgwhite">
+                    <Col span="2" class="col5">
+                        <span class="span9">第23周</span>
                     </Col>
-                    <Col span="10" style="border-left: 1px solid #E6E6E6;margin-top: 20px;margin-bottom: 20px;height: 100%;position: relative;height: 50px">
-                        <img src="../../assets/yudi1.png" style="position: absolute;top: 50%;left: 0;margin-top: -15px;margin-left: -11px;">
-                        <div style="margin-left: 30px;height: 50px;line-height: 50PX;color:#ED5B46;">
+                    <Col span="10" class="col6">
+                        <img src="../../assets/yudi1.png" class="img3">
+                        <div class="div6">
                             <span>未提交数据</span>
                         </div>
                     </Col>        
             </Row>
-            <Row style="background-color: #fff;" >
-                    <Col span="2" style="margin-top:36px; text-align: center;">
-                        <span style="color:#14C5CC;font-size: 14px;">第23周</span>
+            <Row class="bgwhite">
+                    <Col span="2" class="col5">
+                        <span class="span4">第23周</span>
                     </Col>
-                    <Col span="10" style="border-left: 1px solid #E6E6E6;margin-top: 20px;margin-bottom: 20px;position: relative;height: 200px">
-                        <img src="../../assets/yudi.png" style="position: absolute;top: 50%;left: 0;margin-top: -15px;margin-left: -11px;">
-                        <div style="margin-left: 30px;height: 200px;background-color: #F1F1F1;padding-left:20px;padding-top: 20px;line-Height: 28px; ">
+                    <Col span="10" class="col7">
+                        <img src="../../assets/yudi.png" class="img3">
+                        <div class="div7">
                             <div>
                                 <span style="color: #14C5CC;">已完成工作：</span>
                                 <span>W3D电装盒固定板结构优化</span>
@@ -268,6 +268,14 @@ export default {
     line-height: 40px;
     padding-right: 20px;
 }
+.header1{
+  font-size: 14px;
+  color: #969696;
+}
+.header2{
+  font-size: 14px;
+  color: #51D4D9;
+}
 .wrap{
     background-color: #EDF0F5;
 }
@@ -290,5 +298,190 @@ export default {
 }
 .backgroundGrey{
     background-color: #F8F8F9;
+}
+.row1{
+    background-color: #01C0C8;
+    height: 45px;
+}
+.col1{
+    margin-left: 10px;
+    line-height: 45px;
+}
+.span1{
+    font-size: 18px;
+    color: #fff;
+}
+.ml30{
+    margin-left: 30px;
+}
+.bgwhite{
+    background-color: #fff;
+}
+.span2{
+    font-size: 14px;
+    color:#aaaaaa;
+}
+.span3{
+    margin-right: 30px;
+    font-size: 14px;
+}
+.row2{
+    background-color: #fff;
+    border-top: 1px solid #E6E6E6;
+}
+.col2{
+    margin-top: 100px;
+    margin-top:55px; 
+    text-align: center;
+}
+.span4{
+    color:#14C5CC;
+    font-size: 14px;
+}
+.col3{
+    border-left: 1px solid #E6E6E6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 100%;
+    position: relative;
+    height: 480px;
+}
+.img2{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    margin-top: -15px;
+    margin-left: -11px;
+}
+.div1{
+    background-color: #F1F1F1;
+    margin-left: 30px;
+    height: 480px;
+}
+.div2{
+    padding-top: 15px;
+    margin-left: 20px;
+}
+.span5{
+    font-size: 14px;
+    color: #13C3CB;
+    display: block;
+}
+.input1{
+    width: 295px;
+    margin-top: 5px;
+}
+.div3{
+    padding-top: 5px;
+    margin-left: 15px;
+}
+.mt5{
+    margin-top: 5px;
+}
+.pb15{
+    padding-bottom: 15px;
+}
+.input2{
+    width: 300px;
+    margin-top: 5px;
+}
+.span6{
+    font-size: 14px;
+    vertical-align: middle;
+}
+.dp1{
+    width: 175px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.dp2{
+    width: 185px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.input3{
+    width: 300px;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+.ft14{
+    font-size: 14px;
+}
+.div4{
+    margin-top: 3px;
+    text-align: center;
+}
+.button1{
+    background-color: #01C0C8;
+    border-color: #01C0C8;
+    color:#fff;
+    width: 80px;
+}
+.col4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #F1F1F1;
+    height: 480px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.div5{
+    font-weight: bold;
+    height: 40px;
+}
+.span7{
+    height: 40px;
+    line-height: 40px;
+}
+.span8{
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
+}
+.col5{
+    margin-top:36px; 
+    text-align: center;
+}
+.span9{
+     color:#ED5B46;
+     font-size: 14px;
+}
+.col6{
+     border-left: 1px solid #E6E6E6;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     height: 100%;
+     position: relative;
+     height: 50px;
+}
+.img3{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+    margin-left: -11px;
+}
+.div6{
+    margin-left: 30px;
+    height: 50px;
+    line-height: 50PX;
+    color:#ED5B46;
+}
+.col7{
+    border-left: 1px solid #E6E6E6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    height: 200px;
+}
+.div7{
+    margin-left: 30px;
+    height: 200px;
+    background-color: #F1F1F1;
+    padding-left:20px;
+    padding-top: 20px;
+    line-Height: 28px;
 }
 </style>
