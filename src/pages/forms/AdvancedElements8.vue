@@ -29,19 +29,19 @@
                 <Row class="mt10">
                     <Col span="8">
                         <label>&nbsp;&nbsp;&nbsp;项目类型:</label>
-                        <Select v-model="model1" class="w210">
+                        <Select v-model="projectType" class="w210">
                             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                       </Select>
                     </Col>
                     <Col span="8">
                         <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;原材料:</label>
-                        <Select v-model="model1" class="w210">
+                        <Select v-model="yuancailiao" class="w210">
                             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                       </Select>
                     </Col>
                     <Col span="8">
                         <label>&nbsp;&nbsp;&nbsp;项目属性:</label>
-                        <Select v-model="model1" class="w210">
+                        <Select v-model="projectAttr" class="w210">
                             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                       </Select>
                     </Col> 
@@ -113,7 +113,7 @@
                     </Col>
                     <Col span="8">
                         <label>&nbsp;&nbsp;&nbsp;核算方式:</label>
-                        <Select v-model="model1" class="w210">
+                        <Select v-model="hesuanfangshi" class="w210">
                             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                       </Select>
                     </Col> 
@@ -121,19 +121,19 @@
                 <Row class="mt10">
                     <Col span="8">
                         <label>质量部评审:</label>
-                        <Select v-model="model1" class="w210">
+                        <Select v-model="zhiliangpinshen" class="w210">
                             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                       </Select>
                     </Col>
                     <Col span="8">
                         <label>工艺部评审:</label>
-                        <Select v-model="model1" class="w210">
+                        <Select v-model="gongyipinshen" class="w210">
                             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                       </Select>
                     </Col>
                     <Col span="8">
                         <label>开发部审核:</label>
-                        <Select v-model="model1" class="w210">
+                        <Select v-model="kaifapinshen" class="w210">
                             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                       </Select>
                     </Col> 
@@ -141,7 +141,7 @@
                 <Row class="mt10">
                     <Col span="8">
                         <label>财务部评审:</label>
-                        <Select v-model="model1" class="w210">
+                        <Select v-model="caiwupinshen" class="w210">
                             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                       </Select>
                     </Col>
@@ -157,7 +157,7 @@
                 <Row class="mt10">
                     <Col span="8">
                         <label>&nbsp;&nbsp;&nbsp;涉及部门:</label>
-                         <Select v-model="model10" multiple class="w210">
+                         <Select v-model="shejibumen" multiple class="w210">
                             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                         </Select>
                     </Col> 
@@ -181,6 +181,35 @@ export default {
   name: 'advanced-elements',
   data () {
   	return {
+      form:{
+        projectCode:"",
+        projectName:"",
+        projectGroup:"",
+        projectType:"",
+        yuancailiao:"",
+        projectAttr:"",
+        belongFactory:"",
+        belongPart:"",
+        background:"",
+        content:"",
+        predictBenifit:"",
+        predictIn:"",
+        predictMachine:"",
+        predictProduct:"",
+        qianzaiBenifit:"",
+        degree:"",
+        prior:"",
+        person:"",
+        zuzhang:"",
+        hesuanfangshi:"",
+        zhiliangpinshen:"",
+        gongyipinshen:"",
+        kaifapinshen:"",
+        caiwupinshen:"",
+        beizhu:"",
+        date:"",
+        shejibumen:""
+      },
   		yearList: [],
         year: '2017',
         columns1: [],
