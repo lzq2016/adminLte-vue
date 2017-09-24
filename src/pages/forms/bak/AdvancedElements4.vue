@@ -278,7 +278,6 @@ export default {
 }
 .wrap{
     background-color: #EDF0F5;
-    padding: 20px;
 }
 .titleWrap{
     background-color: #01C0C8;

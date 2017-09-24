@@ -353,6 +353,10 @@ export default {
 .mt5{
     margin-top: 5px;
 }
+.mt5{
+    margin-top: 3px;
+    text-align: center;
+}
 .through{
     background-color: #01C0C8;
     border-color: #01C0C8;
@@ -364,9 +368,5 @@ export default {
     border-color: #01C0C8;
     color:#01C0C8;
     width: 80px;
-}
-.buttonWrap{
-    margin-top: 3px;
-    text-align: center;
 }
 </style>

@@ -21,9 +21,9 @@
 					<!-- <Table stripe :columns="table1.th" :data="table1.td" :row-class-name="rowClassName"></Table> -->
 					<div class="tableWrap mt10" v-bind:class="{ showHide: showHide1 }">
                             <div class="tableRow backgroundGrey div2">
-                                <span class="tableSpan span2">项目名称</span>
-                                <span class="tableSpan span2">立项时间</span>
-                                <span class="tableSpan span2">任务类型</span>
+                                <span class="tableSpan" class="span2">项目名称</span>
+                                <span class="tableSpan" class="span2">立项时间</span>
+                                <span class="tableSpan" class="span2">任务类型</span>
                             </div>
                             <div v-for="(item, index) in data6">
                                 <div class="tableRow" :class="{ backgroundGrey: item.backgroundGrey,backgroundGreen:item.backgroundGreen,backgroundPink:item.backgroundPink }">
@@ -47,11 +47,11 @@
 					<!-- <Table stripe :columns="table2.th" :data="table2.td" :row-class-name="rowClassName"></Table> -->
 					<div class="tableWrap" v-bind:class="{ showHide: showHide2 }" style="margin-top: 10px;">
                             <div class="tableRow backgroundGrey div2">
-                                <span class="tableSpan1 span2">项目编码</span>
-                                <span class="tableSpan1 span2">项目名称</span>
-                                <span class="tableSpan1 span2">项目类别</span>
-                                <span class="tableSpan1 span2">阶段</span>
-                                <span class="tableSpan1 span2">状态</span>
+                                <span class="tableSpan1" class="span2">项目编码</span>
+                                <span class="tableSpan1" class="span2">项目名称</span>
+                                <span class="tableSpan1" class="span2">项目类别</span>
+                                <span class="tableSpan1" class="span2">阶段</span>
+                                <span class="tableSpan1" class="span2">状态</span>
                             </div>
                             <div v-for="(item, index) in data7">
                                 <div class="tableRow" :class="{ backgroundGrey: item.backgroundGrey,backgroundGreen:item.backgroundGreen,backgroundPink:item.backgroundPink }">
@@ -74,7 +74,7 @@
 		</Row>
 		
 		<!-- step -->
-		<div class="ivu-hse-steps mt430">
+		<div class="ivu-hse-steps" class="mt430">
 			<header>
 				<h3>项目进展</h3>
 				<Select v-model="model1" class="w200">
@@ -82,7 +82,7 @@
 			    </Select>
 			</header>
 			<Row>
-				<Col span="3" class="steps w150">
+				<Col span="3" class="steps" class="w150">
 					<span>立项数: <em>360</em></span>
 				</Col>
 				<Col span="2" class="w20">
@@ -123,7 +123,7 @@
 		</div>
 
 		<!-- table -->
-		<Row class="ivu-hse-noborder row3">
+		<Row class="ivu-hse-noborder" class="row3">
 			<Col span="24">
 				<Table :columns="table3.th" :data="table3.td"></Table>
 			</Col>

@@ -67,10 +67,10 @@
                     <Col span="11" class="col4">
                         <div class="tableWrap mt20">
                             <div class="tableRow backgroundGrey div5">
-                                <span class="tableSpan span7">计划内容</span>
-                                <span class="tableSpan span7">预计评审完成时间</span>
-                                <span class="tableSpan span7">实际完成时间</span>
-                                <span class="tableSpan span7">状态</span>
+                                <span class="tableSpan" class="span7">计划内容</span>
+                                <span class="tableSpan" class="span7">预计评审完成时间</span>
+                                <span class="tableSpan" class="span7">实际完成时间</span>
+                                <span class="tableSpan" class="span7">状态</span>
                             </div>
                             <div v-for="(item, index) in data6">
                                 <div class="tableRow" :class="{ backgroundGrey: (index%2 != 0) }">

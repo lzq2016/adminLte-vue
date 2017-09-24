@@ -13,7 +13,7 @@
             </div>
             <Col span="24" class="col1">
                <p class="p1">BOM列表</p>
-                <div class="tableWrap div2">
+                <div class="tableWrap" class="div2">
                   <div class="tableRow backgroundGrey div3">
                       <span class="tableSpan span1">序号</span>
                       <span class="tableSpan span1">物料编码(新)</span>
