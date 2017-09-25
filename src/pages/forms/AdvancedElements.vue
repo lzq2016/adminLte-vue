@@ -1,10 +1,10 @@
 <template>
   <div>
-      <div class="header">
+      <div class="header" v-if="!loading">
           <span class="header1">项目管理/</span>
           <span class="header2">项目完成额</span>
         </div>
-      <div class="wrap">
+      <div class="wrap" v-if="!loading">
          <Row>
             <Col span="24">
             	<Select v-model="year" class="select" @on-change="optionChange">
@@ -22,6 +22,12 @@
              <Page :total="totalList" :page-size="10" :current="10" @on-change="changePage" show-elevator></Page>
         </div>
       </div>
+      <div class="demo-spin-col" v-show="loading">
+            <Spin fix>
+                <Icon type="load-c" size=18 class="demo-spin-icon-load"></Icon>
+                <div>Loading</div>
+            </Spin>
+      </div>
   </div>
 </template>
 
@@ -37,7 +43,8 @@ export default {
         year: '2017',
         columns1: [],
         data1: [],
-        totalList:200
+        totalList:200,
+        loading:true
   	}
   },
   beforeMount () {
@@ -60,6 +67,9 @@ export default {
           this.totalList = res.data.response.totalList;
         }
     });
+    setTimeout(function(){
+      self.loading = false;
+    },1000);
   },
   methods: {
     optionChange: function(val) {
@@ -125,5 +135,21 @@ export default {
 .pageWrap{
   margin-top: 20px;
   text-align: center;
+}
+.demo-spin-icon-load{
+  animation: ani-demo-spin 1s linear infinite;
+}
+@keyframes ani-demo-spin {
+  from { transform: rotate(0deg);}
+  50%  { transform: rotate(180deg);}
+  to   { transform: rotate(360deg);}
+}
+.demo-spin-col{
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
 }
 </style>

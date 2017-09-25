@@ -8,133 +8,161 @@
              <Row>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目编码:</label>
-                	<Input v-model="projectCode" v-validate="'required'" name="projectCode" placeholder="项目编码"  class="w210" style="width: 210px"></Input>
+                	<Input v-model="projectCode" v-verify="projectCode" placeholder="项目编码"  class="w210" style="width: 210px"></Input>
+                    <label v-remind="projectCode" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目名称:</label>
-                    <Input v-model="projectName" placeholder="项目名称" class="w210"></Input>
+                    <Input v-model="projectName" v-verify="projectName" placeholder="项目名称" class="w210"></Input>
+                    <label v-remind="projectName" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;项 目 组:</label>
-                    <Input v-model="projectGroup" placeholder="项目组" class="w210"></Input>
+                    <Input v-model="projectGroup" v-verify="projectGroup" placeholder="项目组" class="w210"></Input>
+                    <label v-remind="projectGroup" class="errorTip"></label>
                 </Col> 
             </Row>
             <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目类型:</label>
-                    <Input v-model="projectType" placeholder="项目类型" class="w210"></Input>
+                    <Input v-model="projectType" v-verify="projectType" placeholder="项目类型" class="w210"></Input>
+                    <label v-remind="projectType" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;适用机型:</label>
-                    <Input v-model="adaptMachine" placeholder="适用机型" class="w210"></Input>
+                    <Input v-model="adaptMachine" v-verify="adaptMachine" placeholder="适用机型" class="w210"></Input>
+                    <label v-remind="adaptMachine" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目属性:</label>
-                    <Input v-model="projectAttr" placeholder="项目属性" class="w210"></Input>
+                    <Input v-model="projectAttr" v-verify="projectAttr" placeholder="项目属性" class="w210"></Input>
+                    <label v-remind="projectAttr" class="errorTip"></label>
                 </Col> 
             </Row>
             <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;所属工厂:</label>
-                    <Input v-model="belongFactory" placeholder="项目类型" class="w210"></Input>
+                    <Input v-model="belongFactory" v-verify="belongFactory" placeholder="项目类型" class="w210"></Input>
+                    <label v-remind="belongFactory" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;所属部门:</label>
-                    <Input v-model="belongPart" placeholder="适用机型" class="w210"></Input>
+                    <Input v-model="belongPart" v-verify="belongPart" placeholder="适用机型" class="w210"></Input>
+                    <label v-remind="belongPart" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;申请序号:</label>
-                    <Input v-model="serNum" placeholder="项目属性" class="w210"></Input>
+                    <Input v-model="serNum" v-verify="serNum" placeholder="项目属性" class="w210"></Input>
+                    <label v-remind="serNum" class="errorTip"></label>
                 </Col> 
             </Row>
             <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;现状背景:</label>
-                    <Input v-model="background" placeholder="项目类型" class="w210"></Input>
+                    <Input v-model="background" v-verify="background" placeholder="项目类型" class="w210"></Input>
+                    <label v-remind="background" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;内容措施:</label>
-                    <Input v-model="content" placeholder="适用机型" class="w210"></Input>
+                    <Input v-model="content" v-verify="content" placeholder="适用机型" class="w210"></Input>
+                    <label v-remind="content" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;预测效益:</label>
-                    <Input v-model="predictBenifit" placeholder="项目属性" class="w210"></Input>
+                    <Input v-model="predictBenifit" v-verify="predictBenifit" placeholder="项目属性" class="w210"></Input>
+                    <label v-remind="predictBenifit" class="errorTip"></label>
                 </Col> 
             </Row>
             <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;预计投入:</label>
-                    <Input v-model="predictIn" placeholder="项目类型" class="w210"></Input>
+                    <Input v-model="predictIn" v-verify="predictIn" placeholder="项目类型" class="w210"></Input>
+                    <label v-remind="predictIn" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;预计单机:</label>
-                    <Input v-model="predictMachine" placeholder="适用机型" class="w210"></Input>
+                    <Input v-model="predictMachine" v-verify="predictMachine" placeholder="适用机型" class="w210"></Input>
+                    <label v-remind="predictMachine" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;预计产量:</label>
-                    <Input v-model="predictProduct" placeholder="项目属性" class="w210"></Input>
+                    <Input v-model="predictProduct" v-verify="predictProduct" placeholder="项目属性" class="w210"></Input>
+                    <label v-remind="predictProduct" class="errorTip"></label>
                 </Col> 
             </Row>
             <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;潜在效益:</label>
-                    <Input v-model="qianzaiBenifit" placeholder="项目类型" class="w210"></Input>
+                    <Input v-model="qianzaiBenifit" v-verify="qianzaiBenifit" placeholder="项目类型" class="w210"></Input>
+                    <label v-remind="qianzaiBenifit" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;风险等级:</label>
-                    <Input v-model="degree" placeholder="适用机型" class="w210"></Input>
+                    <Input v-model="degree" v-verify="degree" placeholder="适用机型" class="w210"></Input>
+                    <label v-remind="degree" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>实施优先级:</label>
-                    <Input v-model="prior" placeholder="项目属性" class="w210"></Input>
+                    <Input v-model="prior" v-verify="prior" placeholder="项目属性" class="w210"></Input>
+                    <label v-remind="prior" class="errorTip"></label>
                 </Col> 
             </Row>
             <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;负责人:</label>
-                    <Input v-model="person" placeholder="项目类型" class="w210"></Input>
+                    <Input v-model="person" v-verify="person" placeholder="项目类型" class="w210"></Input>
+                    <label v-remind="person" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;项目组长:</label>
-                    <Input v-model="zuzhang" placeholder="适用机型" class="w210"></Input>
+                    <Input v-model="zuzhang" v-verify="zuzhang" placeholder="适用机型" class="w210"></Input>
+                    <label v-remind="zuzhang" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;核算方式:</label>
-                    <Input v-model="compute" placeholder="项目属性" class="w210"></Input>
+                    <Input v-model="compute" v-verify="compute" placeholder="项目属性" class="w210"></Input>
+                    <label v-remind="compute" class="errorTip"></label>
                 </Col> 
             </Row>
             <Row class="mt10">
                 <Col span="8">
                     <label>质量部评审:</label>
-                    <Input v-model="qulity" placeholder="项目类型" class="w210"></Input>
+                    <Input v-model="qulity" v-verify="qulity" placeholder="项目类型" class="w210"></Input>
+                    <label v-remind="qulity" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>工艺部评审:</label>
-                    <Input v-model="gongyibu" placeholder="适用机型" class="w210"></Input>
+                    <Input v-model="gongyibu" v-verify="gongyibu" placeholder="适用机型" class="w210"></Input>
+                    <label v-remind="gongyibu" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>开发部审核:</label>
-                    <Input v-model="develop" placeholder="项目属性" class="w210"></Input>
+                    <Input v-model="develop" v-verify="develop" placeholder="项目属性" class="w210"></Input>
+                    <label v-remind="develop" class="errorTip"></label>
                 </Col> 
             </Row>
             <Row class="mt10">
                 <Col span="8">
                     <label>财务部评审:</label>
-                    <Input v-model="money" placeholder="项目类型" class="w210"></Input>
+                    <Input v-model="money" v-verify="money" placeholder="项目类型" class="w210"></Input>
+                    <label v-remind="money" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注:</label>
-                    <Input v-model="beizhu" placeholder="适用机型" class="w210"></Input>
+                    <Input v-model="beizhu" v-verify="beizhu" placeholder="适用机型" class="w210"></Input>
+                    <label v-remind="beizhu" class="errorTip"></label>
                 </Col>
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期:</label>
-                    <Input v-model="date" placeholder="项目属性" class="w210"></Input>
+                    <Input v-model="date" v-verify="date" placeholder="项目属性" class="w210"></Input>
+                    <label v-remind="date" class="errorTip"></label>
                 </Col> 
             </Row>
             <Row class="mt10">
                 <Col span="8">
                     <label>&nbsp;&nbsp;&nbsp;涉及部门:</label>
-                    <Input v-model="shejiPart" placeholder="项目类型" class="w210"></Input>
+                    <Input v-model="shejiPart" v-verify="shejiPart" placeholder="项目类型" class="w210"></Input>
+                    <label v-remind="shejiPart" class="errorTip"></label>
                 </Col> 
             </Row>
             <p class="p1">BOM列表</p>
@@ -287,6 +315,36 @@ export default {
         data6: []
   	}
   },
+  verify: {
+        projectCode:"required",
+        projectName:"required",
+        projectGroup:"required",
+        projectType:"required",
+        adaptMachine:"required",
+        projectAttr:"required",
+        belongFactory:"required",
+        belongPart:"required",
+        serNum:"required",
+        background:"required",
+        content:"required",
+        predictBenifit:"required",
+        predictIn:"required",
+        predictMachine:"required",
+        predictProduct:"required",
+        qianzaiBenifit:"required",
+        degree:"required",
+        prior:"required",
+        person:"required",
+        zuzhang:"required",
+        compute:"required",
+        qulity:"required",
+        gongyibu:"required",
+        develop:"required",
+        money:"required",
+        beizhu:"required",
+        date:"required",
+        shejiPart:"required"
+    },
   beforeMount () {
     var self = this;
     
@@ -298,8 +356,8 @@ export default {
         
     },
     error:function () {
-        // console.log(this.errors.has('email'))
-        // !this.errors.has('email')&&this.$Message.error('项目类型内容不能为空！');
+        console.log(this.$verify.check())
+        !this.$verify.check()&&this.$Message.error('信息不完整！');
     }
   }
 }
@@ -368,5 +426,8 @@ export default {
 .buttonWrap{
     margin-top: 3px;
     text-align: center;
+}
+.errorTip{
+    color: #ed3f14;
 }
 </style>
